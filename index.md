@@ -296,7 +296,7 @@
  </svg></div>
 
 <div id="area" style="width: 695px; height: 190px; border:1px solid black; ">
-<svg id=pattern xmlns="http://www.w3.org/2000/svg" width="180mm" height="50mm" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 18000 5000">
+<svg id="pattern" xmlns="http://www.w3.org/2000/svg" width="180mm" height="50mm" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 18000 5000">
 <g id="Layer_x0020_1">
     <g id="_451943384">
       <path fill="none" type = "button" stroke="#111" stroke-width="13.6" d="M3397 4787c1986-109 3089-1157 4103-2275C8688 1206 9738 326 11580 219v-6c-2027 68-3129 1154-4130 2249-1188 1304-2222 2170-4054 2316v10z" />
