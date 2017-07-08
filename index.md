@@ -115,7 +115,7 @@ viewBox="0 0 774 153"
     
 <div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/cross target.html">
-<img src="img/cross Target.jpg" style="width:230px;height:230px;"></a></div>    
+<img src="img/Cross Target.jpg" style="width:230px;height:230px;"></a></div>    
     
 <div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/Andromeda.html">
