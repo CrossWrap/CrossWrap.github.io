@@ -74,8 +74,8 @@ viewBox="0 0 774 153"
 
 	
 <div class="morph pic" style = "width:230px; height:230px;">
-<a href="pattern/moorish idol.html">
-<img src="img/moorish idol.jpg" style="width:230px;height:230px;"></a></div>
+<a href="pattern/Moorish Idol.html">
+<img src="img/Moorish Idol.jpg" style="width:230px;height:230px;"></a></div>
 
 <div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/predator.html">
@@ -115,7 +115,7 @@ viewBox="0 0 774 153"
     
 <div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/cross target.html">
-<img src="img/Cross Target.jpg" style="width:230px;height:230px;"></a></div>    
+<img src="img/cross Target.jpg" style="width:230px;height:230px;"></a></div>    
     
 <div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/Andromeda.html">
