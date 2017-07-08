@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<script src="../js/svg-pan-zoom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+</head>
+            
+<body>
+<style>
+#sidebar {float: none;width: 60pxhover: blue;}
+</style>
+<div id="sidebar">
+    
+    
+<svg id="swatches" width="900" height="260" style="stroke: #000;stroke-width: 2; stroke-opacity: 0">
+
+  <rect style="fill:#000000" width="23" height="23" />
+  <rect style="fill:#F47F17" y="25" width="23" height="23" />
+  <rect style="fill:#FF6E00" y="50" width="23" height="23" />
+  <rect style="fill:#E65100" y="75" width="23" height="23" />
+  <rect style="fill:#BF360C" y="100" width="23" height="23" />
+  <rect style="fill:#B71C1C" y="125" width="23" height="23" />
+  <rect style="fill:#880E4F" y="150" width="23" height="23" />
+  <rect style="fill:#4A148C" y="175" width="23" height="23" />
+  <rect style="fill:#311B92" y="200" width="23" height="23" />
+  <rect style="fill:#424242" x="25" width="23" height="23" />
+  <rect style="fill:#F9A825" x="25" y="25" width="23" height="23" />
+  <rect style="fill:#FF8F00" x="25" y="50" width="23" height="23" />
+  <rect style="fill:#EF6C00" x="25" y="75" width="23" height="23" />
+  <rect style="fill:#D84315" x="25" y="100" width="23" height="23" />
+  <rect style="fill:#C62828" x="25" y="125" width="23" height="23" />
+  <rect style="fill:#AD1457" x="25" y="150" width="23" height="23" />
+  <rect style="fill:#6A1B9A" x="25" y="175" width="23" height="23" />
+  <rect style="fill:#4527A0" x="25" y="200" width="23" height="23" />
+  <rect style="fill:#616161" x="50" width="23" height="23" />
+  <rect style="fill:#FBC02D" x="50" y="25" width="23" height="23" />
+  <rect style="fill:#FFA000" x="50" y="50" width="23" height="23" />
+  <rect style="fill:#F57C00" x="50" y="75" width="23" height="23" />
+  <rect style="fill:#E64A18" x="50" y="100" width="23" height="23" />
+  <rect style="fill:#D32F2F" x="50" y="125" width="23" height="23" />
+  <rect style="fill:#C2185B" x="50" y="150" width="23" height="23" />
+  <rect style="fill:#7B1EA2" x="50" y="175" width="23" height="23" />
+  <rect style="fill:#512CA8" x="50" y="200" width="23" height="23" />
+  <rect style="fill:#757575" x="75" width="23" height="23" />
+  <rect style="fill:#FDD735" x="75" y="25" width="23" height="23" />
+  <rect style="fill:#FFB300" x="75" y="50" width="23" height="23" />
+  <rect style="fill:#FB8C00" x="75" y="75" width="23" height="23" />
+  <rect style="fill:#F4511E" x="75" y="100" width="23" height="23" />
+  <rect style="fill:#E53935" x="75" y="125" width="23" height="23" />
+  <rect style="fill:#D81B60" x="75" y="150" width="23" height="23" />
+  <rect style="fill:#8E24AA" x="75" y="175" width="23" height="23" />
+  <rect style="fill:#5E35B1" x="75" y="200" width="23" height="23" />
+  <rect style="fill:#9E9E9E" x="100" width="23" height="23" />
+  <rect style="fill:#FEEB3B" x="100" y="25" width="23" height="23" />
+  <rect style="fill:#FFC107" x="100" y="50" width="23" height="23" />
+  <rect style="fill:#FF9800" x="100" y="75" width="23" height="23" />
+  <rect style="fill:#FF5722" x="100" y="100" width="23" height="23" />
+  <rect style="fill:#F44336" x="100" y="125" width="23" height="23" />
+  <rect style="fill:#E91D62" x="100" y="150" width="23" height="23" />
+  <rect style="fill:#9C27B0" x="100" y="175" width="23" height="23" />
+  <rect style="fill:#673AB7" x="100" y="200" width="23" height="23" />
+  <rect style="fill:#BDBDBD" x="125" width="23" height="23" />
+  <rect style="fill:#FFEE58" x="125" y="25" width="23" height="23" />
+  <rect style="fill:#FFCA28" x="125" y="50" width="23" height="23" />
+  <rect style="fill:#FFA726" x="125" y="75" width="23" height="23" />
+  <rect style="fill:#FF6F43" x="125" y="100" width="23" height="23" />
+  <rect style="fill:#EF5350" x="125" y="125" width="23" height="23" />
+  <rect style="fill:#EC407A" x="125" y="150" width="23" height="23" />
+  <rect style="fill:#AB47BC" x="125" y="175" width="23" height="23" />
+  <rect style="fill:#7D57C2" x="125" y="200" width="23" height="23" />
+  <rect style="fill:#E0E0E0" x="150" width="23" height="23" />
+  <rect style="fill:#FFEA00" x="150" y="25" width="23" height="23" />
+  <rect style="fill:#FFC300" x="150" y="50" width="23" height="23" />
+  <rect style="fill:#FF9100" x="150" y="75" width="23" height="23" />
+  <rect style="fill:#FF3D00" x="150" y="100" width="23" height="23" />
+  <rect style="fill:#FE1744" x="150" y="125" width="23" height="23" />
+  <rect style="fill:#F50057" x="150" y="150" width="23" height="23" />
+  <rect style="fill:#D500F9" x="150" y="175" width="23" height="23" />
+  <rect style="fill:#651FFF" x="150" y="200" width="23" height="23" />
+  <rect style="fill:#EEEEEE" x="175" width="23" height="23" />
+  <rect fill="yellow" x="175" y="25" width="23" height="23" />
+  <rect style="fill:#FFD740" x="175" y="50" width="23" height="23" />
+  <rect style="fill:#FFAB40" x="175" y="75" width="23" height="23" />
+  <rect style="fill:#FF6E40" x="175" y="100" width="23" height="23" />
+  <rect style="fill:#FF5252" x="175" y="125" width="23" height="23" />
+  <rect style="fill:#FE4081" x="175" y="150" width="23" height="23" />
+  <rect style="fill:#E040FB" x="175" y="175" width="23" height="23" />
+  <rect style="fill:#7C4DFF" x="175" y="200" width="23" height="23" />
+  <rect style="fill:#F4F4F4" x="200" width="23" height="23" />
+  <rect style="fill:#FFFF8D" x="200" y="25" width="23" height="23" />
+  <rect style="fill:#FFE57F" x="200" y="50" width="23" height="23" />
+  <rect style="fill:#FFD080" x="200" y="75" width="23" height="23" />
+  <rect style="fill:#FF9E80" x="200" y="100" width="23" height="23" />
+  <rect style="fill:#FF8A80" x="200" y="125" width="23" height="23" />
+  <rect style="fill:#FF80AB" x="200" y="150" width="23" height="23" />
+  <rect style="fill:#EA80FB" x="200" y="175" width="23" height="23" />
+  <rect style="fill:#B388FE" x="200" y="200" width="23" height="23" />
+  <rect style="fill:#FAFAFA" x="225" width="23" height="23" />
+  <rect style="fill:#FFF076" x="225" y="25" width="23" height="23" />
+  <rect style="fill:#FED54F" x="225" y="50" width="23" height="23" />
+  <rect style="fill:#FFB74D" x="225" y="75" width="23" height="23" />
+  <rect style="fill:#FF8A64" x="225" y="100" width="23" height="23" />
+  <rect style="fill:#E57373" x="225" y="125" width="23" height="23" />
+  <rect style="fill:#F06192" x="225" y="150" width="23" height="23" />
+  <rect style="fill:#BA68C8" x="225" y="175" width="23" height="23" />
+  <rect style="fill:#9575CD" x="225" y="200" width="23" height="23" />
+  <rect style="fill:#455A64" x="250" width="23" height="23" />
+  <rect style="fill:#FFF59D" x="250" y="25" width="23" height="23" />
+  <rect style="fill:#FFE082" x="250" y="50" width="23" height="23" />
+  <rect style="fill:#FFCC80" x="250" y="75" width="23" height="23" />
+  <rect style="fill:#FFAB91" x="250" y="100" width="23" height="23" />
+  <rect style="fill:#EF9A9A" x="250" y="125" width="23" height="23" />
+  <rect style="fill:#F48FB1" x="250" y="150" width="23" height="23" />
+  <rect style="fill:#CE93D8" x="250" y="175" width="23" height="23" />
+  <rect style="fill:#B39DDB" x="250" y="200" width="23" height="23" />
+  <rect style="fill:#546E7A" x="275" width="23" height="23" />
+  <rect style="fill:#FFF9C4" x="275" y="25" width="23" height="23" />
+  <rect style="fill:#FFECB3" x="275" y="50" width="23" height="23" />
+  <rect style="fill:#FFE0B2" x="275" y="75" width="23" height="23" />
+  <rect style="fill:#FECCBC" x="275" y="100" width="23" height="23" />
+  <rect style="fill:#FECDD2" x="275" y="125" width="23" height="23" />
+  <rect style="fill:#F8BAD0" x="275" y="150" width="23" height="23" />
+  <rect style="fill:#E1BEE7" x="275" y="175" width="23" height="23" />
+  <rect style="fill:#D1C4E9" x="275" y="200" width="23" height="23" />
+  <rect style="fill:#607D8B" x="300" width="23" height="23" />
+  <rect style="fill:#FFFDE7" x="300" y="25" width="23" height="23" />
+  <rect style="fill:#FEF8E1" x="300" y="50" width="23" height="23" />
+  <rect style="fill:#FFF3E0" x="300" y="75" width="23" height="23" />
+  <rect style="fill:#FBE9E7" x="300" y="100" width="23" height="23" />
+  <rect style="fill:#FFEBEE" x="300" y="125" width="23" height="23" />
+  <rect style="fill:#FCE3EC" x="300" y="150" width="23" height="23" />
+  <rect style="fill:#F3E5F5" x="300" y="175" width="23" height="23" />
+  <rect style="fill:#EDE6F6" x="300" y="200" width="23" height="23" />
+  <rect style="fill:#78909C" x="325" width="23" height="23" />
+  <rect style="fill:#827717" x="325" y="25" width="23" height="23" />
+  <rect style="fill:#33691D" x="325" y="50" width="23" height="23" />
+  <rect style="fill:#1B5E20" x="325" y="75" width="23" height="23" />
+  <rect style="fill:#004D40" x="325" y="100" width="23" height="23" />
+  <rect style="fill:#006064" x="325" y="125" width="23" height="23" />
+  <rect style="fill:#01579B" x="325" y="150" width="23" height="23" />
+  <rect style="fill:#0D47A1" x="325" y="175" width="23" height="23" />
+  <rect style="fill:#1A237E" x="325" y="200" width="23" height="23" />
+  <rect style="fill:#90A4AE" x="350" width="23" height="23" />
+  <rect style="fill:#9E9D24" x="350" y="25" width="23" height="23" />
+  <rect style="fill:#558B2F" x="350" y="50" width="23" height="23" />
+  <rect style="fill:#2E7C32" x="350" y="75" width="23" height="23" />
+  <rect style="fill:#00695C" x="350" y="100" width="23" height="23" />
+  <rect style="fill:#00838F" x="350" y="125" width="23" height="23" />
+  <rect style="fill:#0277BD" x="350" y="150" width="23" height="23" />
+  <rect style="fill:#1565C0" x="350" y="175" width="23" height="23" />
+  <rect style="fill:#283593" x="350" y="200" width="23" height="23" />
+  <rect style="fill:#B0BEC5" x="375" width="23" height="23" />
+  <rect style="fill:#AFB42B" x="375" y="25" width="23" height="23" />
+  <rect style="fill:#689F37" x="375" y="50" width="23" height="23" />
+  <rect style="fill:#378E3C" x="375" y="75" width="23" height="23" />
+  <rect style="fill:#00796B" x="375" y="100" width="23" height="23" />
+  <rect style="fill:#0097A7" x="375" y="125" width="23" height="23" />
+  <rect style="fill:#0288D1" x="375" y="150" width="23" height="23" />
+  <rect style="fill:#1976D2" x="375" y="175" width="23" height="23" />
+  <rect style="fill:#303F9F" x="375" y="200" width="23" height="23" />
+  <rect style="fill:#CFD8DC" x="400" width="23" height="23" />
+  <rect style="fill:#C0CA33" x="400" y="25" width="23" height="23" />
+  <rect style="fill:#7CB342" x="400" y="50" width="23" height="23" />
+  <rect style="fill:#43A047" x="400" y="75" width="23" height="23" />
+  <rect style="fill:#00897B" x="400" y="100" width="23" height="23" />
+  <rect style="fill:#00ACC1" x="400" y="125" width="23" height="23" />
+  <rect style="fill:#029BE5" x="400" y="150" width="23" height="23" />
+  <rect style="fill:#1E88E5" x="400" y="175" width="23" height="23" />
+  <rect style="fill:#3949AB" x="400" y="200" width="23" height="23" />
+  <rect style="fill:#EBEFF1" x="425" width="23" height="23" />
+  <rect style="fill:#CCDC39" x="425" y="25" width="23" height="23" />
+  <rect style="fill:#8BC24A" x="425" y="50" width="23" height="23" />
+  <rect style="fill:#4CAF50" x="425" y="75" width="23" height="23" />
+  <rect style="fill:#009688" x="425" y="100" width="23" height="23" />
+  <rect style="fill:#00BCD4" x="425" y="125" width="23" height="23" />
+  <rect style="fill:#03A9F4" x="425" y="150" width="23" height="23" />
+  <rect style="fill:#2196F3" x="425" y="175" width="23" height="23" />
+  <rect style="fill:#3E51B5" x="425" y="200" width="23" height="23" />
+  <rect style="fill:#4E332E" x="450" width="23" height="23" />
+  <rect style="fill:#CCDC39" x="450" y="25" width="23" height="23" />
+  <rect style="fill:#8BC24A" x="450" y="50" width="23" height="23" />
+  <rect style="fill:#4CAF50" x="450" y="75" width="23" height="23" />
+  <rect style="fill:#009688" x="450" y="100" width="23" height="23" />
+  <rect style="fill:#00BCD4" x="450" y="125" width="23" height="23" />
+  <rect style="fill:#03A9F4" x="450" y="150" width="23" height="23" />
+  <rect style="fill:#2196F3" x="450" y="175" width="23" height="23" />
+  <rect style="fill:#3E51B5" x="450" y="200" width="23" height="23" />
+  <rect style="fill:#5D4037" x="475" width="23" height="23" />
+  <rect style="fill:#AEEA00" x="475" y="25" width="23" height="23" />
+  <rect style="fill:#64DD17" x="475" y="50" width="23" height="23" />
+  <rect style="fill:#00C853" x="475" y="75" width="23" height="23" />
+  <rect style="fill:#00BFA5" x="475" y="100" width="23" height="23" />
+  <rect style="fill:#00B8D4" x="475" y="125" width="23" height="23" />
+  <rect style="fill:#0091EA" x="475" y="150" width="23" height="23" />
+  <rect style="fill:#2962FF" x="475" y="175" width="23" height="23" />
+  <rect style="fill:#304FFE" x="475" y="200" width="23" height="23" />
+  <rect style="fill:#6D4C41" x="500" width="23" height="23" />
+  <rect style="fill:#C6FE00" x="500" y="25" width="23" height="23" />
+  <rect style="fill:#76FF03" x="500" y="50" width="23" height="23" />
+  <rect style="fill:#00E676" x="500" y="75" width="23" height="23" />
+  <rect style="fill:#1DE9B6" x="500" y="100" width="23" height="23" />
+  <rect style="fill:#00E5FF" x="500" y="125" width="23" height="23" />
+  <rect style="fill:#00B0FF" x="500" y="150" width="23" height="23" />
+  <rect style="fill:#2979FF" x="500" y="175" width="23" height="23" />
+  <rect style="fill:#3D5AFE" x="500" y="200" width="23" height="23" />
+  <rect style="fill:#795548" x="525" width="23" height="23" />
+  <rect style="fill:#EEFF41" x="525" y="25" width="23" height="23" />
+  <rect style="fill:#B2FF59" x="525" y="50" width="23" height="23" />
+  <rect style="fill:#69F0AE" x="525" y="75" width="23" height="23" />
+  <rect style="fill:#64FFDA" x="525" y="100" width="23" height="23" />
+  <rect style="fill:#18FFFF" x="525" y="125" width="23" height="23" />
+  <rect style="fill:#40C4FF" x="525" y="150" width="23" height="23" />
+  <rect style="fill:#448AFF" x="525" y="175" width="23" height="23" />
+  <rect style="fill:#536DFD" x="525" y="200" width="23" height="23" />
+  <rect style="fill:#8D6E62" x="550" width="23" height="23" />
+  <rect style="fill:#D4E157" x="550" y="25" width="23" height="23" />
+  <rect style="fill:#9CCC65" x="550" y="50" width="23" height="23" />
+  <rect style="fill:#66BB6A" x="550" y="75" width="23" height="23" />
+  <rect style="fill:#26A69A" x="550" y="100" width="23" height="23" />
+  <rect style="fill:#26C6DA" x="550" y="125" width="23" height="23" />
+  <rect style="fill:#29B6F6" x="550" y="150" width="23" height="23" />
+  <rect style="fill:#42A5F5" x="550" y="175" width="23" height="23" />
+  <rect style="fill:#5C6BC0" x="550" y="200" width="23" height="23" />
+  <rect style="fill:#A1887E" x="575" width="23" height="23" />
+  <rect style="fill:#DBE675" x="575" y="25" width="23" height="23" />
+  <rect style="fill:#AED581" x="575" y="50" width="23" height="23" />
+  <rect style="fill:#81C784" x="575" y="75" width="23" height="23" />
+  <rect style="fill:#4DB5AC" x="575" y="100" width="23" height="23" />
+  <rect style="fill:#4DD0E1" x="575" y="125" width="23" height="23" />
+  <rect style="fill:#4FC3F7" x="575" y="150" width="23" height="23" />
+  <rect style="fill:#63B4F6" x="575" y="175" width="23" height="23" />
+  <rect style="fill:#7986CB" x="575" y="200" width="23" height="23" />
+  <rect style="fill:#BCAAA4" x="600" width="23" height="23" />
+  <rect style="fill:#E6EE9C" x="600" y="25" width="23" height="23" />
+  <rect style="fill:#C5E1A5" x="600" y="50" width="23" height="23" />
+  <rect style="fill:#A5D6A7" x="600" y="75" width="23" height="23" />
+  <rect style="fill:#80CAC4" x="600" y="100" width="23" height="23" />
+  <rect style="fill:#80DEE9" x="600" y="125" width="23" height="23" />
+  <rect style="fill:#81D4FA" x="600" y="150" width="23" height="23" />
+  <rect style="fill:#90C9F9" x="600" y="175" width="23" height="23" />
+  <rect style="fill:#9FA8DA" x="600" y="200" width="23" height="23" />
+  <rect style="fill:#D7CCC8" x="625" width="23" height="23" />
+  <rect style="fill:#F4FE81" x="625" y="25" width="23" height="23" />
+  <rect style="fill:#CCFF90" x="625" y="50" width="23" height="23" />
+  <rect style="fill:#B8F6CA" x="625" y="75" width="23" height="23" />
+  <rect style="fill:#A7FFEA" x="625" y="100" width="23" height="23" />
+  <rect style="fill:#84FFFF" x="625" y="125" width="23" height="23" />
+  <rect style="fill:#80D7FF" x="625" y="150" width="23" height="23" />
+  <rect style="fill:#82B1FF" x="625" y="175" width="23" height="23" />
+  <rect style="fill:#8C9EFF" x="625" y="200" width="23" height="23" />
+  <rect style="fill:#EFEBE9" x="650" width="23" height="23" />
+  <rect style="fill:#EFF4C3" x="650" y="25" width="23" height="23" />
+  <rect style="fill:#DCEDC8" x="650" y="50" width="23" height="23" />
+  <rect style="fill:#C7E6C9" x="650" y="75" width="23" height="23" />
+  <rect style="fill:#B2DFDB" x="650" y="100" width="23" height="23" />
+  <rect style="fill:#B2EAF2" x="650" y="125" width="23" height="23" />
+  <rect style="fill:#B3E5FC" x="650" y="150" width="23" height="23" />
+  <rect style="fill:#BBDEFB" x="650" y="175" width="23" height="23" />
+  <rect style="fill:#C5C9E8" x="650" y="200" width="23" height="23" />
+  <rect style="fill:#FAF7F5" x="675" width="23" height="23" />
+  <rect style="fill:#F9FBE7" x="675" y="25" width="23" height="23" />
+  <rect style="fill:#F1F8E9" x="675" y="50" width="23" height="23" />
+  <rect style="fill:#E8F4E9" x="675" y="75" width="23" height="23" />
+  <rect style="fill:#DFF2F1" x="675" y="100" width="23" height="23" />
+  <rect style="fill:#E0F7FA" x="675" y="125" width="23" height="23" />
+  <rect style="fill:#E1F4FE" x="675" y="150" width="23" height="23" />
+  <rect style="fill:#E2F2FD" x="675" y="175" width="23" height="23" />
+  <rect style="fill:#E8EAF6" x="675" y="200" width="23" height="23" />
+  <rect id="selection" style="stroke:#0000ff; stroke-opacity: 1;fill:none" x="0" y="0" width="23" height="23" />
+    
+  <rect fill="#000000" type="button" stroke="#000000" stroke-width="0.68" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#000000';" />
+  <rect fill="#4d3d25" type="button" stroke="#000000" stroke-width="0.68" x="28" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#4d3d25';" />
+  <rect fill="#BBB8BD" type="button" stroke="#000000" stroke-width="0.68" x="56" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#BBB8BD';" />
+  <rect fill="#747A84" type="button" stroke="#000000" stroke-width="0.68" x="84" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#747A84';" />
+  <rect fill="#FFF212" type="button" stroke="#000000" stroke-width="0.68" x="112" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#FFF212';" />
+  <rect fill="#3A41C7" type="button" stroke="#000000" stroke-width="0.68" x="140" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#3A41C7';" />
+  <rect fill="#3F2E5E" type="button" stroke="#000000" stroke-width="0.68" x="168" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#3F2E5E';" />
+  <rect fill="#A90098" type="button" stroke="#000000" stroke-width="0.68" x="195" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#A90098';" />
+  <rect fill="#469ef5" type="button" stroke="#000000" stroke-width="0.68" x="223" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#469ef5';" />
+  <rect fill="#008EEC" type="button" stroke="#000000" stroke-width="0.68" x="251" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#008EEC';" />
+  <rect fill="#9ED5CE" type="button" stroke="#000000" stroke-width="0.68" x="279" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#9ED5CE';" />
+  <rect fill="#FEFEFE" type="button" stroke="#000000" stroke-width="0.68" x="307" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#FEFEFE';" />
+  <rect fill="#2A4C67" type="button" stroke="#000000" stroke-width="0.68" x="335" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#2A4C67';" />
+  <rect fill="#585A43" type="button" stroke="#000000" stroke-width="0.68" x="363" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#585A43';" />
+  <rect fill="#A2D06B" type="button" stroke="#000000" stroke-width="0.68" x="391" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#A2D06B';" />
+  <rect fill="#013C09" type="button" stroke="#000000" stroke-width="0.68" x="419" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#013C09';" />
+  <rect fill="#a0f032" type="button" stroke="#000000" stroke-width="0.68" x="447" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#a0f032';" />
+  <rect fill="#F1E018" type="button" stroke="#000000" stroke-width="0.68" x="475" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#F1E018';" />
+  <rect fill="#E4CF98" type="button" stroke="#000000" stroke-width="0.68" x="503" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#E4CF98';" />
+  <rect fill="#FD8200" type="button" stroke="#000000" stroke-width="0.68" x="530" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#FD8200';" />
+  <rect fill="#B94C00" type="button" stroke="#000000" stroke-width="0.68" x="558" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#B94C00';" />
+  <rect fill="#9A0116" type="button" stroke="#000000" stroke-width="0.68" x="586" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#9A0116';" />
+  <rect fill="#6F1721" type="button" stroke="#000000" stroke-width="0.68" x="614" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#6F1721';" />
+  <rect fill="#5F2124" type="button" stroke="#000000" stroke-width="0.68" x="642" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#5F2124';" />
+  <rect fill="#040e2e" type="button" stroke="#000000" stroke-width="0.68" x="670" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#040e2e';" />
+ </svg></div>
+
+<div id="area" style="width: 695px; height: 250px; border:1px solid black; ">
+<svg id="pattern" xmlns="http://www.w3.org/2000/svg" width="184mm" height="66.5mm" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 18000 5000">
+
+  <defs>
+    <style>
+<![CDATA[
+    .fil1 {fill:#1A1A1A;stroke:black;stroke-width:13.6}
+    .fil0 {fill:#6DC39F;stroke:black;stroke-width:13.6}
+   ]]>
+    </style>
+  </defs>
+  <g id="Layer_x0020_1">
+    <path class="fil0" d="M3412 4563c1791-98 2786-1044 3700-2052C8184 1333 9131 539 10792 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M10792 4563c-1791-98-2786-1044-3700-2052C6020 1333 5073 539 3412 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM14588 4563c-1791-98-2786-1044-3700-2052C9816 1333 8869 539 7208 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M7208 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM4951 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M12330 4563c-1791-98-2785-1044-3700-2052C7559 1333 6611 539 4951 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M13049 4563c-1791-98-2785-1044-3700-2052C8278 1333 7330 539 5670 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M5670 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM1421 4563c1791-98 2786-1044 3700-2052C6193 1333 7140 539 8801 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M8801 4563c-1791-98-2786-1044-3700-2052C4029 1333 3082 539 1421 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM16579 4563c-1791-98-2785-1044-3700-2052-1072-1178-2019-1972-3680-2068v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M9199 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM3498 4563c1791-98 2785-1044 3700-2052C8269 1333 9217 539 10877 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M10877 4563c-1791-98-2785-1044-3700-2052C6106 1333 5158 539 3498 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM14502 4563c-1791-98-2785-1044-3700-2052C9731 1333 8783 539 7123 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M7123 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM3322 4563c1791-98 2785-1044 3700-2052C8093 1333 9041 539 10701 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M10701 4563c-1791-98-2785-1044-3700-2052C5930 1333 4982 539 3322 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM14678 4563c-1791-98-2785-1044-3700-2052C9907 1333 8959 539 7299 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M7299 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M5041 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M12421 4563c-1791-98-2786-1044-3700-2052C7649 1333 6702 539 5041 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M12959 4563c-1791-98-2786-1044-3700-2052C8187 1333 7240 539 5579 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M5579 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M4860 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M12240 4563c-1791-98-2786-1044-3700-2052C7468 1333 6521 539 4860 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M13140 4563c-1791-98-2786-1044-3700-2052C8368 1333 7421 539 5760 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M5760 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M1512 4563c1791-98 2785-1044 3700-2052C6283 1333 7231 539 8891 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M8891 4563c-1791-98-2785-1044-3700-2052C4120 1333 3172 539 1512 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM16488 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M9109 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M1331 4563c1791-98 2785-1044 3700-2052C6102 1333 7050 539 8710 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M8710 4563c-1791-98-2785-1044-3700-2052C3939 1333 2991 539 1331 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM16669 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M9290 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM3588 4563c1791-98 2786-1044 3700-2052C8360 1333 9307 539 10968 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M10968 4563c-1791-98-2786-1044-3700-2052C6196 1333 5249 539 3588 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM14412 4563c-1791-98-2785-1044-3700-2052C9640 1333 8693 539 7032 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M7032 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM3231 4563c1791-98 2786-1044 3700-2052C8003 1333 8950 539 10611 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M10611 4563c-1791-98-2786-1044-3700-2052C5839 1333 4892 539 3231 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM14769 4563c-1791-98-2786-1044-3700-2052C9997 1333 9050 539 7389 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M7389 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M5132 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M12511 4563c-1791-98-2785-1044-3700-2052C7740 1333 6792 539 5132 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M12868 4563c-1791-98-2785-1044-3700-2052C8097 1333 7149 539 5489 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M5489 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM1602 4563c1791-98 2786-1044 3700-2052C6374 1333 7321 539 8982 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M8982 4563c-1791-98-2786-1044-3700-2052C4210 1333 3263 539 1602 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM16398 4563c-1791-98-2785-1044-3700-2052-1072-1178-2019-1972-3680-2068v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M9018 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M4770 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M12149 4563c-1791-98-2785-1044-3700-2052C7378 1333 6430 539 4770 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M13230 4563c-1791-98-2785-1044-3700-2052C8459 1333 7511 539 5851 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M5851 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM1240 4563c1791-98 2786-1044 3700-2052C6012 1333 6959 539 8620 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M8620 4563c-1791-98-2786-1044-3700-2052C3848 1333 2901 539 1240 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM16760 4563c-1791-98-2785-1044-3700-2052-1072-1178-2019-1972-3680-2068v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M9380 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M5222 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M12602 4563c-1791-98-2786-1044-3700-2052C7830 1333 6883 539 5222 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M12778 4563c-1791-98-2786-1044-3700-2052C8006 1333 7059 539 5398 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M5398 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M5313 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M12692 4563c-1791-98-2785-1044-3700-2052C7921 1333 6973 539 5313 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M1693 4563c1791-98 2785-1044 3700-2052C6464 1333 7412 539 9072 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M9072 4563c-1791-98-2785-1044-3700-2052C4301 1333 3353 539 1693 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM16307 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M8928 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M1150 4563c1791-98 2785-1044 3700-2052C5921 1333 6869 539 8529 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M8529 4563c-1791-98-2785-1044-3700-2052C3758 1333 2810 539 1150 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM16850 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M9471 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM3679 4563c1791-98 2785-1044 3700-2052C8450 1333 9398 539 11058 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M11058 4563c-1791-98-2785-1044-3700-2052C6287 1333 5339 539 3679 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM14321 4563c-1791-98-2785-1044-3700-2052C9550 1333 8602 539 6942 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M6942 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM3141 4563c1791-98 2785-1044 3700-2052C7912 1333 8860 539 10520 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M10520 4563c-1791-98-2785-1044-3700-2052C5749 1333 4801 539 3141 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM14859 4563c-1791-98-2785-1044-3700-2052C10088 1333 9140 539 7480 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M7480 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M1783 4563c1791-98 2786-1044 3700-2052C6555 1333 7502 539 9163 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M9163 4563c-1791-98-2786-1044-3700-2052C4391 1333 3444 539 1783 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM16217 4563c-1791-98-2785-1044-3700-2052-1072-1178-2019-1972-3680-2068v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M8837 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M4679 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M12059 4563c-1791-98-2786-1044-3700-2052C7287 1333 6340 539 4679 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M13321 4563c-1791-98-2786-1044-3700-2052C8549 1333 7602 539 5941 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M5941 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M1874 4563c1791-98 2785-1044 3700-2052C6645 1333 7593 539 9253 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M9253 4563c-1791-98-2785-1044-3700-2052C4482 1333 3534 539 1874 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM16126 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M8747 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M1059 4563c1791-98 2786-1044 3700-2052C5831 1333 6778 539 8439 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M8439 4563c-1791-98-2786-1044-3700-2052C3667 1333 2720 539 1059 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM16941 4563c-1791-98-2785-1044-3700-2052-1072-1178-2019-1972-3680-2068v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M9561 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M1964 4563c1791-98 2786-1044 3700-2052C6736 1333 7683 539 9344 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M9344 4563c-1791-98-2786-1044-3700-2052C4572 1333 3625 539 1964 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM16036 4563c-1791-98-2785-1044-3700-2052-1072-1178-2019-1972-3680-2068v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M8656 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M4589 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M11968 4563c-1791-98-2785-1044-3700-2052C7197 1333 6249 539 4589 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M13411 4563c-1791-98-2785-1044-3700-2052C8640 1333 7692 539 6032 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M6032 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM3769 4563c1791-98 2786-1044 3700-2052C8541 1333 9488 539 11149 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M11149 4563c-1791-98-2786-1044-3700-2052C6377 1333 5430 539 3769 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM14231 4563c-1791-98-2785-1044-3700-2052C9459 1333 8512 539 6851 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M6851 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM3050 4563c1791-98 2786-1044 3700-2052C7822 1333 8769 539 10430 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M10430 4563c-1791-98-2786-1044-3700-2052C5658 1333 4711 539 3050 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM14950 4563c-1791-98-2786-1044-3700-2052C10178 1333 9231 539 7570 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M7570 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M2055 4563c1791-98 2785-1044 3700-2052C6826 1333 7774 539 9434 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M9434 4563c-1791-98-2785-1044-3700-2052C4663 1333 3715 539 2055 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM15945 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M8566 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M969 4563c1791-98 2785-1044 3700-2052C5740 1333 6688 539 8348 443v-6c-1828 62-2821 1041-3724 2029C3553 3642 2620 4423 969 4554v9z"/>
+    <path class="fil0" d="M8348 4563c-1791-98-2785-1044-3700-2052C3577 1333 2629 539 969 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM17031 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M9652 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M2145 4563c1791-98 2786-1044 3700-2052C6917 1333 7864 539 9525 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M9525 4563c-1791-98-2786-1044-3700-2052C4753 1333 3806 539 2145 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM15855 4563c-1791-98-2786-1044-3700-2052-1072-1178-2019-1972-3680-2068v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M8475 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M878 4563c1791-98 2786-1044 3700-2052C5650 1333 6597 539 8258 443v-6c-1828 62-2822 1041-3724 2029C3462 3642 2530 4423 878 4554v9z"/>
+    <path class="fil0" d="M8258 4563c-1791-98-2786-1044-3700-2052C3486 1333 2539 539 878 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM17122 4563c-1791-98-2785-1044-3700-2052-1072-1178-2019-1972-3680-2068v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M9742 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM4498 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M11878 4563c-1791-98-2786-1044-3700-2052C7106 1333 6159 539 4498 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM13502 4563c-1791-98-2786-1044-3700-2052C8730 1333 7783 539 6122 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M6122 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M2236 4563c1791-98 2785-1044 3700-2052C7007 1333 7955 539 9615 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M9615 4563c-1791-98-2785-1044-3700-2052C4844 1333 3896 539 2236 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM15764 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M8385 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M3860 4563c1791-98 2785-1044 3700-2052C8631 1333 9579 539 11239 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M11239 4563c-1791-98-2785-1044-3700-2052C6468 1333 5520 539 3860 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM14140 4563c-1791-98-2785-1044-3700-2052C9369 1333 8421 539 6761 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M6761 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM2960 4563c1791-98 2785-1044 3700-2052C7731 1333 8679 539 10339 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M10339 4563c-1791-98-2785-1044-3700-2052C5568 1333 4620 539 2960 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM15040 4563c-1791-98-2785-1044-3700-2052C10269 1333 9321 539 7661 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M7661 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M2326 4563c1791-98 2786-1044 3700-2052C7098 1333 8045 539 9706 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M9706 4563c-1791-98-2786-1044-3700-2052C4934 1333 3987 539 2326 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM15674 4563c-1791-98-2786-1044-3700-2052C10902 1333 9955 539 8294 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M8294 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM2417 4563c1791-98 2785-1044 3700-2052C7188 1333 8136 539 9796 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M9796 4563c-1791-98-2785-1044-3700-2052C5025 1333 4077 539 2417 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM15583 4563c-1791-98-2785-1044-3700-2052C10812 1333 9864 539 8204 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M8204 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M4408 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M11787 4563c-1791-98-2785-1044-3700-2052C7016 1333 6068 539 4408 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM13592 4563c-1791-98-2785-1044-3700-2052C8821 1333 7873 539 6213 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M6213 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM788 4563c1791-98 2785-1044 3700-2052C5559 1333 6507 539 8167 443v-6c-1828 62-2821 1041-3724 2029C3372 3642 2439 4423 788 4554v9z"/>
+    <path class="fil0" d="M8167 4563c-1791-98-2785-1044-3700-2052C3396 1333 2448 539 788 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM17212 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil0" d="M9833 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M2507 4563c1791-98 2786-1044 3700-2052C7279 1333 8226 539 9887 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M9887 4563c-1791-98-2786-1044-3700-2052C5115 1333 4168 539 2507 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM15493 4563c-1791-98-2786-1044-3700-2052C10721 1333 9774 539 8113 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M8113 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM2598 4563c1791-98 2785-1044 3700-2052C7369 1333 8317 539 9977 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M9977 4563c-1791-98-2785-1044-3700-2052C5206 1333 4258 539 2598 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM15402 4563c-1791-98-2785-1044-3700-2052C10631 1333 9683 539 8023 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M8023 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil0" d="M4317 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil0" d="M11697 4563c-1791-98-2786-1044-3700-2052C6925 1333 5978 539 4317 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM13683 4563c-1791-98-2786-1044-3700-2052C8911 1333 7964 539 6303 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M6303 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM697 4563c1791-98 2785-1044 3700-2052C5469 1333 6416 539 8077 443v-6c-1828 62-2822 1041-3724 2029C3281 3642 2349 4423 697 4554v9z"/>
+    <path class="fil0" d="M8077 4563c-1791-98-2786-1044-3700-2052C3305 1333 2358 539 697 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM17303 4563c-1791-98-2785-1044-3700-2052-1072-1178-2019-1972-3680-2068v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil0" d="M9923 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M2688 4563c1791-98 2786-1044 3700-2052C7460 1333 8407 539 10068 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M10068 4563c-1791-98-2786-1044-3700-2052C5296 1333 4349 539 2688 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM15312 4563c-1791-98-2786-1044-3700-2052C10540 1333 9593 539 7932 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M7932 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM2779 4563c1791-98 2785-1044 3700-2052C7550 1333 8498 539 10158 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M10158 4563c-1791-98-2785-1044-3700-2052C5387 1333 4439 539 2779 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM15221 4563c-1791-98-2785-1044-3700-2052C10450 1333 9502 539 7842 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M7842 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM4222 4563c1791-98 2785-1044 3700-2052C8993 1333 9941 539 11601 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M11601 4563c-1791-98-2785-1044-3700-2052C6830 1333 5882 539 4222 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM13778 4563c-1791-98-2785-1044-3700-2052C9007 1333 8059 539 6399 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M6399 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM4131 4563c1791-98 2786-1044 3700-2052C8903 1333 9850 539 11511 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M11511 4563c-1791-98-2786-1044-3700-2052C6739 1333 5792 539 4131 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM13869 4563c-1791-98-2785-1044-3700-2052C9097 1333 8150 539 6489 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M6489 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM2869 4563c1791-98 2786-1044 3700-2052C7641 1333 8588 539 10249 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M10249 4563c-1791-98-2786-1044-3700-2052C5477 1333 4530 539 2869 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM15131 4563c-1791-98-2786-1044-3700-2052C10359 1333 9412 539 7751 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M7751 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM4041 4563c1791-98 2785-1044 3700-2052C8812 1333 9760 539 11420 443v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+    <path class="fil1" d="M11420 4563c-1791-98-2785-1044-3700-2052C6649 1333 5701 539 4041 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM13959 4563c-1791-98-2785-1044-3700-2052C9188 1333 8240 539 6580 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M6580 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM3950 4563c1791-98 2786-1044 3700-2052C8722 1333 9669 539 11330 443v-6c-1828 62-2822 1041-3724 2029-1072 1176-2004 1957-3656 2088v9z"/>
+    <path class="fil1" d="M11330 4563c-1791-98-2786-1044-3700-2052C6558 1333 5611 539 3950 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM14050 4563c-1791-98-2785-1044-3700-2052C9278 1333 8331 539 6670 443v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M6670 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM607 4563c1791-98 2785-1044 3700-2052C5378 1333 6326 539 7986 443v-6c-1828 62-2821 1041-3724 2029C3191 3642 2258 4423 607 4554v9z"/>
+    <path class="fil1" d="M7986 4563c-1791-98-2785-1044-3700-2052C3215 1333 2267 539 607 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM17393 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M10014 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9zM516 4563c1791-98 2785-1044 3700-2052C5288 1333 6235 539 7896 443v-6c-1828 62-2822 1041-3724 2029C3100 3642 2168 4423 516 4554v9z"/>
+    <path class="fil1" d="M7896 4563c-1791-98-2786-1044-3700-2052C3124 1333 2177 539 516 443v-6c1828 62 2821 1041 3724 2029 1072 1176 2004 1957 3656 2088v9zM17484 4563c-1791-98-2785-1044-3700-2052-1072-1178-2019-1972-3680-2068v-6c1828 62 2822 1041 3724 2029 1072 1176 2004 1957 3656 2088v9z"/>
+    <path class="fil1" d="M10104 4563c1791-98 2786-1044 3700-2052 1072-1178 2019-1972 3680-2068v-6c-1828 62-2821 1041-3724 2029-1072 1176-2004 1957-3656 2088v9zM426 4563c1791-98 2785-1044 3700-2052C5197 1333 6145 539 7805 443v-6c-1828 62-2821 1041-3724 2029C3010 3642 2077 4423 426 4554v9z"/>
+    <path class="fil1" d="M7805 4563c-1791-98-2785-1044-3700-2052C3034 1333 2086 539 426 443v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9zM17574 4563c-1791-98-2785-1044-3700-2052-1071-1178-2019-1972-3679-2068v-6c1828 62 2821 1041 3724 2029 1071 1176 2004 1957 3655 2088v9z"/>
+    <path class="fil1" d="M10195 4563c1791-98 2785-1044 3700-2052 1071-1178 2019-1972 3679-2068v-6c-1828 62-2821 1041-3724 2029-1071 1176-2004 1957-3655 2088v9z"/>
+  </g>
+</svg>
+
+</div>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>
+var _currentFill = "fill:#000";
+$("#pattern").click(function (event) {
+        $(event.target).attr('style', _currentFill);
+    });
+var $swatches = $("#swatches");
+    $swatches.click(function (event) {
+        $swatch = $(event.target);
+        loc = [parseInt($swatch.attr('x'), 10), parseInt($swatch.attr('y'), 10)]
+        $("#selection", $swatches).attr('x', loc[0]);
+        $("#selection", $swatches).attr('y', loc[1]);
+        _currentFill = $swatch.attr('style');
+    })
+</script>
+    
+ <script>
+        window.onload       = function() {      
+        window.cross      = svgPanZoom('#pattern', {
+        zoomEnabled: true,
+        zoomScaleSensitivity: 0.5,
+		minZoom: 1,
+		maxZoom: 20,
+		panEnabled: true,
+		dblClickZoomEnabled: false,
+        fit: true,
+        center: true,	
+                 });
+      };
+</script>   
+</body>
+</html>
+
+
+   

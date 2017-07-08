@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<script src="../js/svg-pan-zoom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+</head>
+            
+<body>
+<style>
+#sidebar {float: none;width: 60pxhover: blue;}
+</style>
+<div id="sidebar">
+    
+    
+<svg id="swatches" width="900" height="260" style="stroke: #000;stroke-width: 2; stroke-opacity: 0">
+
+  <rect style="fill:#000000" width="23" height="23" />
+  <rect style="fill:#F47F17" y="25" width="23" height="23" />
+  <rect style="fill:#FF6E00" y="50" width="23" height="23" />
+  <rect style="fill:#E65100" y="75" width="23" height="23" />
+  <rect style="fill:#BF360C" y="100" width="23" height="23" />
+  <rect style="fill:#B71C1C" y="125" width="23" height="23" />
+  <rect style="fill:#880E4F" y="150" width="23" height="23" />
+  <rect style="fill:#4A148C" y="175" width="23" height="23" />
+  <rect style="fill:#311B92" y="200" width="23" height="23" />
+  <rect style="fill:#424242" x="25" width="23" height="23" />
+  <rect style="fill:#F9A825" x="25" y="25" width="23" height="23" />
+  <rect style="fill:#FF8F00" x="25" y="50" width="23" height="23" />
+  <rect style="fill:#EF6C00" x="25" y="75" width="23" height="23" />
+  <rect style="fill:#D84315" x="25" y="100" width="23" height="23" />
+  <rect style="fill:#C62828" x="25" y="125" width="23" height="23" />
+  <rect style="fill:#AD1457" x="25" y="150" width="23" height="23" />
+  <rect style="fill:#6A1B9A" x="25" y="175" width="23" height="23" />
+  <rect style="fill:#4527A0" x="25" y="200" width="23" height="23" />
+  <rect style="fill:#616161" x="50" width="23" height="23" />
+  <rect style="fill:#FBC02D" x="50" y="25" width="23" height="23" />
+  <rect style="fill:#FFA000" x="50" y="50" width="23" height="23" />
+  <rect style="fill:#F57C00" x="50" y="75" width="23" height="23" />
+  <rect style="fill:#E64A18" x="50" y="100" width="23" height="23" />
+  <rect style="fill:#D32F2F" x="50" y="125" width="23" height="23" />
+  <rect style="fill:#C2185B" x="50" y="150" width="23" height="23" />
+  <rect style="fill:#7B1EA2" x="50" y="175" width="23" height="23" />
+  <rect style="fill:#512CA8" x="50" y="200" width="23" height="23" />
+  <rect style="fill:#757575" x="75" width="23" height="23" />
+  <rect style="fill:#FDD735" x="75" y="25" width="23" height="23" />
+  <rect style="fill:#FFB300" x="75" y="50" width="23" height="23" />
+  <rect style="fill:#FB8C00" x="75" y="75" width="23" height="23" />
+  <rect style="fill:#F4511E" x="75" y="100" width="23" height="23" />
+  <rect style="fill:#E53935" x="75" y="125" width="23" height="23" />
+  <rect style="fill:#D81B60" x="75" y="150" width="23" height="23" />
+  <rect style="fill:#8E24AA" x="75" y="175" width="23" height="23" />
+  <rect style="fill:#5E35B1" x="75" y="200" width="23" height="23" />
+  <rect style="fill:#9E9E9E" x="100" width="23" height="23" />
+  <rect style="fill:#FEEB3B" x="100" y="25" width="23" height="23" />
+  <rect style="fill:#FFC107" x="100" y="50" width="23" height="23" />
+  <rect style="fill:#FF9800" x="100" y="75" width="23" height="23" />
+  <rect style="fill:#FF5722" x="100" y="100" width="23" height="23" />
+  <rect style="fill:#F44336" x="100" y="125" width="23" height="23" />
+  <rect style="fill:#E91D62" x="100" y="150" width="23" height="23" />
+  <rect style="fill:#9C27B0" x="100" y="175" width="23" height="23" />
+  <rect style="fill:#673AB7" x="100" y="200" width="23" height="23" />
+  <rect style="fill:#BDBDBD" x="125" width="23" height="23" />
+  <rect style="fill:#FFEE58" x="125" y="25" width="23" height="23" />
+  <rect style="fill:#FFCA28" x="125" y="50" width="23" height="23" />
+  <rect style="fill:#FFA726" x="125" y="75" width="23" height="23" />
+  <rect style="fill:#FF6F43" x="125" y="100" width="23" height="23" />
+  <rect style="fill:#EF5350" x="125" y="125" width="23" height="23" />
+  <rect style="fill:#EC407A" x="125" y="150" width="23" height="23" />
+  <rect style="fill:#AB47BC" x="125" y="175" width="23" height="23" />
+  <rect style="fill:#7D57C2" x="125" y="200" width="23" height="23" />
+  <rect style="fill:#E0E0E0" x="150" width="23" height="23" />
+  <rect style="fill:#FFEA00" x="150" y="25" width="23" height="23" />
+  <rect style="fill:#FFC300" x="150" y="50" width="23" height="23" />
+  <rect style="fill:#FF9100" x="150" y="75" width="23" height="23" />
+  <rect style="fill:#FF3D00" x="150" y="100" width="23" height="23" />
+  <rect style="fill:#FE1744" x="150" y="125" width="23" height="23" />
+  <rect style="fill:#F50057" x="150" y="150" width="23" height="23" />
+  <rect style="fill:#D500F9" x="150" y="175" width="23" height="23" />
+  <rect style="fill:#651FFF" x="150" y="200" width="23" height="23" />
+  <rect style="fill:#EEEEEE" x="175" width="23" height="23" />
+  <rect fill="yellow" x="175" y="25" width="23" height="23" />
+  <rect style="fill:#FFD740" x="175" y="50" width="23" height="23" />
+  <rect style="fill:#FFAB40" x="175" y="75" width="23" height="23" />
+  <rect style="fill:#FF6E40" x="175" y="100" width="23" height="23" />
+  <rect style="fill:#FF5252" x="175" y="125" width="23" height="23" />
+  <rect style="fill:#FE4081" x="175" y="150" width="23" height="23" />
+  <rect style="fill:#E040FB" x="175" y="175" width="23" height="23" />
+  <rect style="fill:#7C4DFF" x="175" y="200" width="23" height="23" />
+  <rect style="fill:#F4F4F4" x="200" width="23" height="23" />
+  <rect style="fill:#FFFF8D" x="200" y="25" width="23" height="23" />
+  <rect style="fill:#FFE57F" x="200" y="50" width="23" height="23" />
+  <rect style="fill:#FFD080" x="200" y="75" width="23" height="23" />
+  <rect style="fill:#FF9E80" x="200" y="100" width="23" height="23" />
+  <rect style="fill:#FF8A80" x="200" y="125" width="23" height="23" />
+  <rect style="fill:#FF80AB" x="200" y="150" width="23" height="23" />
+  <rect style="fill:#EA80FB" x="200" y="175" width="23" height="23" />
+  <rect style="fill:#B388FE" x="200" y="200" width="23" height="23" />
+  <rect style="fill:#FAFAFA" x="225" width="23" height="23" />
+  <rect style="fill:#FFF076" x="225" y="25" width="23" height="23" />
+  <rect style="fill:#FED54F" x="225" y="50" width="23" height="23" />
+  <rect style="fill:#FFB74D" x="225" y="75" width="23" height="23" />
+  <rect style="fill:#FF8A64" x="225" y="100" width="23" height="23" />
+  <rect style="fill:#E57373" x="225" y="125" width="23" height="23" />
+  <rect style="fill:#F06192" x="225" y="150" width="23" height="23" />
+  <rect style="fill:#BA68C8" x="225" y="175" width="23" height="23" />
+  <rect style="fill:#9575CD" x="225" y="200" width="23" height="23" />
+  <rect style="fill:#455A64" x="250" width="23" height="23" />
+  <rect style="fill:#FFF59D" x="250" y="25" width="23" height="23" />
+  <rect style="fill:#FFE082" x="250" y="50" width="23" height="23" />
+  <rect style="fill:#FFCC80" x="250" y="75" width="23" height="23" />
+  <rect style="fill:#FFAB91" x="250" y="100" width="23" height="23" />
+  <rect style="fill:#EF9A9A" x="250" y="125" width="23" height="23" />
+  <rect style="fill:#F48FB1" x="250" y="150" width="23" height="23" />
+  <rect style="fill:#CE93D8" x="250" y="175" width="23" height="23" />
+  <rect style="fill:#B39DDB" x="250" y="200" width="23" height="23" />
+  <rect style="fill:#546E7A" x="275" width="23" height="23" />
+  <rect style="fill:#FFF9C4" x="275" y="25" width="23" height="23" />
+  <rect style="fill:#FFECB3" x="275" y="50" width="23" height="23" />
+  <rect style="fill:#FFE0B2" x="275" y="75" width="23" height="23" />
+  <rect style="fill:#FECCBC" x="275" y="100" width="23" height="23" />
+  <rect style="fill:#FECDD2" x="275" y="125" width="23" height="23" />
+  <rect style="fill:#F8BAD0" x="275" y="150" width="23" height="23" />
+  <rect style="fill:#E1BEE7" x="275" y="175" width="23" height="23" />
+  <rect style="fill:#D1C4E9" x="275" y="200" width="23" height="23" />
+  <rect style="fill:#607D8B" x="300" width="23" height="23" />
+  <rect style="fill:#FFFDE7" x="300" y="25" width="23" height="23" />
+  <rect style="fill:#FEF8E1" x="300" y="50" width="23" height="23" />
+  <rect style="fill:#FFF3E0" x="300" y="75" width="23" height="23" />
+  <rect style="fill:#FBE9E7" x="300" y="100" width="23" height="23" />
+  <rect style="fill:#FFEBEE" x="300" y="125" width="23" height="23" />
+  <rect style="fill:#FCE3EC" x="300" y="150" width="23" height="23" />
+  <rect style="fill:#F3E5F5" x="300" y="175" width="23" height="23" />
+  <rect style="fill:#EDE6F6" x="300" y="200" width="23" height="23" />
+  <rect style="fill:#78909C" x="325" width="23" height="23" />
+  <rect style="fill:#827717" x="325" y="25" width="23" height="23" />
+  <rect style="fill:#33691D" x="325" y="50" width="23" height="23" />
+  <rect style="fill:#1B5E20" x="325" y="75" width="23" height="23" />
+  <rect style="fill:#004D40" x="325" y="100" width="23" height="23" />
+  <rect style="fill:#006064" x="325" y="125" width="23" height="23" />
+  <rect style="fill:#01579B" x="325" y="150" width="23" height="23" />
+  <rect style="fill:#0D47A1" x="325" y="175" width="23" height="23" />
+  <rect style="fill:#1A237E" x="325" y="200" width="23" height="23" />
+  <rect style="fill:#90A4AE" x="350" width="23" height="23" />
+  <rect style="fill:#9E9D24" x="350" y="25" width="23" height="23" />
+  <rect style="fill:#558B2F" x="350" y="50" width="23" height="23" />
+  <rect style="fill:#2E7C32" x="350" y="75" width="23" height="23" />
+  <rect style="fill:#00695C" x="350" y="100" width="23" height="23" />
+  <rect style="fill:#00838F" x="350" y="125" width="23" height="23" />
+  <rect style="fill:#0277BD" x="350" y="150" width="23" height="23" />
+  <rect style="fill:#1565C0" x="350" y="175" width="23" height="23" />
+  <rect style="fill:#283593" x="350" y="200" width="23" height="23" />
+  <rect style="fill:#B0BEC5" x="375" width="23" height="23" />
+  <rect style="fill:#AFB42B" x="375" y="25" width="23" height="23" />
+  <rect style="fill:#689F37" x="375" y="50" width="23" height="23" />
+  <rect style="fill:#378E3C" x="375" y="75" width="23" height="23" />
+  <rect style="fill:#00796B" x="375" y="100" width="23" height="23" />
+  <rect style="fill:#0097A7" x="375" y="125" width="23" height="23" />
+  <rect style="fill:#0288D1" x="375" y="150" width="23" height="23" />
+  <rect style="fill:#1976D2" x="375" y="175" width="23" height="23" />
+  <rect style="fill:#303F9F" x="375" y="200" width="23" height="23" />
+  <rect style="fill:#CFD8DC" x="400" width="23" height="23" />
+  <rect style="fill:#C0CA33" x="400" y="25" width="23" height="23" />
+  <rect style="fill:#7CB342" x="400" y="50" width="23" height="23" />
+  <rect style="fill:#43A047" x="400" y="75" width="23" height="23" />
+  <rect style="fill:#00897B" x="400" y="100" width="23" height="23" />
+  <rect style="fill:#00ACC1" x="400" y="125" width="23" height="23" />
+  <rect style="fill:#029BE5" x="400" y="150" width="23" height="23" />
+  <rect style="fill:#1E88E5" x="400" y="175" width="23" height="23" />
+  <rect style="fill:#3949AB" x="400" y="200" width="23" height="23" />
+  <rect style="fill:#EBEFF1" x="425" width="23" height="23" />
+  <rect style="fill:#CCDC39" x="425" y="25" width="23" height="23" />
+  <rect style="fill:#8BC24A" x="425" y="50" width="23" height="23" />
+  <rect style="fill:#4CAF50" x="425" y="75" width="23" height="23" />
+  <rect style="fill:#009688" x="425" y="100" width="23" height="23" />
+  <rect style="fill:#00BCD4" x="425" y="125" width="23" height="23" />
+  <rect style="fill:#03A9F4" x="425" y="150" width="23" height="23" />
+  <rect style="fill:#2196F3" x="425" y="175" width="23" height="23" />
+  <rect style="fill:#3E51B5" x="425" y="200" width="23" height="23" />
+  <rect style="fill:#4E332E" x="450" width="23" height="23" />
+  <rect style="fill:#CCDC39" x="450" y="25" width="23" height="23" />
+  <rect style="fill:#8BC24A" x="450" y="50" width="23" height="23" />
+  <rect style="fill:#4CAF50" x="450" y="75" width="23" height="23" />
+  <rect style="fill:#009688" x="450" y="100" width="23" height="23" />
+  <rect style="fill:#00BCD4" x="450" y="125" width="23" height="23" />
+  <rect style="fill:#03A9F4" x="450" y="150" width="23" height="23" />
+  <rect style="fill:#2196F3" x="450" y="175" width="23" height="23" />
+  <rect style="fill:#3E51B5" x="450" y="200" width="23" height="23" />
+  <rect style="fill:#5D4037" x="475" width="23" height="23" />
+  <rect style="fill:#AEEA00" x="475" y="25" width="23" height="23" />
+  <rect style="fill:#64DD17" x="475" y="50" width="23" height="23" />
+  <rect style="fill:#00C853" x="475" y="75" width="23" height="23" />
+  <rect style="fill:#00BFA5" x="475" y="100" width="23" height="23" />
+  <rect style="fill:#00B8D4" x="475" y="125" width="23" height="23" />
+  <rect style="fill:#0091EA" x="475" y="150" width="23" height="23" />
+  <rect style="fill:#2962FF" x="475" y="175" width="23" height="23" />
+  <rect style="fill:#304FFE" x="475" y="200" width="23" height="23" />
+  <rect style="fill:#6D4C41" x="500" width="23" height="23" />
+  <rect style="fill:#C6FE00" x="500" y="25" width="23" height="23" />
+  <rect style="fill:#76FF03" x="500" y="50" width="23" height="23" />
+  <rect style="fill:#00E676" x="500" y="75" width="23" height="23" />
+  <rect style="fill:#1DE9B6" x="500" y="100" width="23" height="23" />
+  <rect style="fill:#00E5FF" x="500" y="125" width="23" height="23" />
+  <rect style="fill:#00B0FF" x="500" y="150" width="23" height="23" />
+  <rect style="fill:#2979FF" x="500" y="175" width="23" height="23" />
+  <rect style="fill:#3D5AFE" x="500" y="200" width="23" height="23" />
+  <rect style="fill:#795548" x="525" width="23" height="23" />
+  <rect style="fill:#EEFF41" x="525" y="25" width="23" height="23" />
+  <rect style="fill:#B2FF59" x="525" y="50" width="23" height="23" />
+  <rect style="fill:#69F0AE" x="525" y="75" width="23" height="23" />
+  <rect style="fill:#64FFDA" x="525" y="100" width="23" height="23" />
+  <rect style="fill:#18FFFF" x="525" y="125" width="23" height="23" />
+  <rect style="fill:#40C4FF" x="525" y="150" width="23" height="23" />
+  <rect style="fill:#448AFF" x="525" y="175" width="23" height="23" />
+  <rect style="fill:#536DFD" x="525" y="200" width="23" height="23" />
+  <rect style="fill:#8D6E62" x="550" width="23" height="23" />
+  <rect style="fill:#D4E157" x="550" y="25" width="23" height="23" />
+  <rect style="fill:#9CCC65" x="550" y="50" width="23" height="23" />
+  <rect style="fill:#66BB6A" x="550" y="75" width="23" height="23" />
+  <rect style="fill:#26A69A" x="550" y="100" width="23" height="23" />
+  <rect style="fill:#26C6DA" x="550" y="125" width="23" height="23" />
+  <rect style="fill:#29B6F6" x="550" y="150" width="23" height="23" />
+  <rect style="fill:#42A5F5" x="550" y="175" width="23" height="23" />
+  <rect style="fill:#5C6BC0" x="550" y="200" width="23" height="23" />
+  <rect style="fill:#A1887E" x="575" width="23" height="23" />
+  <rect style="fill:#DBE675" x="575" y="25" width="23" height="23" />
+  <rect style="fill:#AED581" x="575" y="50" width="23" height="23" />
+  <rect style="fill:#81C784" x="575" y="75" width="23" height="23" />
+  <rect style="fill:#4DB5AC" x="575" y="100" width="23" height="23" />
+  <rect style="fill:#4DD0E1" x="575" y="125" width="23" height="23" />
+  <rect style="fill:#4FC3F7" x="575" y="150" width="23" height="23" />
+  <rect style="fill:#63B4F6" x="575" y="175" width="23" height="23" />
+  <rect style="fill:#7986CB" x="575" y="200" width="23" height="23" />
+  <rect style="fill:#BCAAA4" x="600" width="23" height="23" />
+  <rect style="fill:#E6EE9C" x="600" y="25" width="23" height="23" />
+  <rect style="fill:#C5E1A5" x="600" y="50" width="23" height="23" />
+  <rect style="fill:#A5D6A7" x="600" y="75" width="23" height="23" />
+  <rect style="fill:#80CAC4" x="600" y="100" width="23" height="23" />
+  <rect style="fill:#80DEE9" x="600" y="125" width="23" height="23" />
+  <rect style="fill:#81D4FA" x="600" y="150" width="23" height="23" />
+  <rect style="fill:#90C9F9" x="600" y="175" width="23" height="23" />
+  <rect style="fill:#9FA8DA" x="600" y="200" width="23" height="23" />
+  <rect style="fill:#D7CCC8" x="625" width="23" height="23" />
+  <rect style="fill:#F4FE81" x="625" y="25" width="23" height="23" />
+  <rect style="fill:#CCFF90" x="625" y="50" width="23" height="23" />
+  <rect style="fill:#B8F6CA" x="625" y="75" width="23" height="23" />
+  <rect style="fill:#A7FFEA" x="625" y="100" width="23" height="23" />
+  <rect style="fill:#84FFFF" x="625" y="125" width="23" height="23" />
+  <rect style="fill:#80D7FF" x="625" y="150" width="23" height="23" />
+  <rect style="fill:#82B1FF" x="625" y="175" width="23" height="23" />
+  <rect style="fill:#8C9EFF" x="625" y="200" width="23" height="23" />
+  <rect style="fill:#EFEBE9" x="650" width="23" height="23" />
+  <rect style="fill:#EFF4C3" x="650" y="25" width="23" height="23" />
+  <rect style="fill:#DCEDC8" x="650" y="50" width="23" height="23" />
+  <rect style="fill:#C7E6C9" x="650" y="75" width="23" height="23" />
+  <rect style="fill:#B2DFDB" x="650" y="100" width="23" height="23" />
+  <rect style="fill:#B2EAF2" x="650" y="125" width="23" height="23" />
+  <rect style="fill:#B3E5FC" x="650" y="150" width="23" height="23" />
+  <rect style="fill:#BBDEFB" x="650" y="175" width="23" height="23" />
+  <rect style="fill:#C5C9E8" x="650" y="200" width="23" height="23" />
+  <rect style="fill:#FAF7F5" x="675" width="23" height="23" />
+  <rect style="fill:#F9FBE7" x="675" y="25" width="23" height="23" />
+  <rect style="fill:#F1F8E9" x="675" y="50" width="23" height="23" />
+  <rect style="fill:#E8F4E9" x="675" y="75" width="23" height="23" />
+  <rect style="fill:#DFF2F1" x="675" y="100" width="23" height="23" />
+  <rect style="fill:#E0F7FA" x="675" y="125" width="23" height="23" />
+  <rect style="fill:#E1F4FE" x="675" y="150" width="23" height="23" />
+  <rect style="fill:#E2F2FD" x="675" y="175" width="23" height="23" />
+  <rect style="fill:#E8EAF6" x="675" y="200" width="23" height="23" />
+  <rect id="selection" style="stroke:#0000ff; stroke-opacity: 1;fill:none" x="0" y="0" width="23" height="23" />
+    
+  <rect fill="#000000" type="button" stroke="#000000" stroke-width="0.68" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#000000';" />
+  <rect fill="#4d3d25" type="button" stroke="#000000" stroke-width="0.68" x="28" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#4d3d25';" />
+  <rect fill="#BBB8BD" type="button" stroke="#000000" stroke-width="0.68" x="56" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#BBB8BD';" />
+  <rect fill="#747A84" type="button" stroke="#000000" stroke-width="0.68" x="84" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#747A84';" />
+  <rect fill="#FFF212" type="button" stroke="#000000" stroke-width="0.68" x="112" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#FFF212';" />
+  <rect fill="#3A41C7" type="button" stroke="#000000" stroke-width="0.68" x="140" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#3A41C7';" />
+  <rect fill="#3F2E5E" type="button" stroke="#000000" stroke-width="0.68" x="168" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#3F2E5E';" />
+  <rect fill="#A90098" type="button" stroke="#000000" stroke-width="0.68" x="195" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#A90098';" />
+  <rect fill="#469ef5" type="button" stroke="#000000" stroke-width="0.68" x="223" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#469ef5';" />
+  <rect fill="#008EEC" type="button" stroke="#000000" stroke-width="0.68" x="251" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#008EEC';" />
+  <rect fill="#9ED5CE" type="button" stroke="#000000" stroke-width="0.68" x="279" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#9ED5CE';" />
+  <rect fill="#FEFEFE" type="button" stroke="#000000" stroke-width="0.68" x="307" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#FEFEFE';" />
+  <rect fill="#2A4C67" type="button" stroke="#000000" stroke-width="0.68" x="335" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#2A4C67';" />
+  <rect fill="#585A43" type="button" stroke="#000000" stroke-width="0.68" x="363" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#585A43';" />
+  <rect fill="#A2D06B" type="button" stroke="#000000" stroke-width="0.68" x="391" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#A2D06B';" />
+  <rect fill="#013C09" type="button" stroke="#000000" stroke-width="0.68" x="419" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#013C09';" />
+  <rect fill="#a0f032" type="button" stroke="#000000" stroke-width="0.68" x="447" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#a0f032';" />
+  <rect fill="#F1E018" type="button" stroke="#000000" stroke-width="0.68" x="475" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#F1E018';" />
+  <rect fill="#E4CF98" type="button" stroke="#000000" stroke-width="0.68" x="503" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#E4CF98';" />
+  <rect fill="#FD8200" type="button" stroke="#000000" stroke-width="0.68" x="530" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#FD8200';" />
+  <rect fill="#B94C00" type="button" stroke="#000000" stroke-width="0.68" x="558" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#B94C00';" />
+  <rect fill="#9A0116" type="button" stroke="#000000" stroke-width="0.68" x="586" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#9A0116';" />
+  <rect fill="#6F1721" type="button" stroke="#000000" stroke-width="0.68" x="614" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#6F1721';" />
+  <rect fill="#5F2124" type="button" stroke="#000000" stroke-width="0.68" x="642" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#5F2124';" />
+  <rect fill="#040e2e" type="button" stroke="#000000" stroke-width="0.68" x="670" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#040e2e';" />
+ </svg></div>
+
+<div id="area" style="width: 695px; height: 250px; border:1px solid black; ">
+<svg id="pattern" xmlns="http://www.w3.org/2000/svg" width="184mm" height="66.5mm" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 18000 5000">
+
+
+  <defs>
+    <style>
+<![CDATA[
+    .fil2 {fill:none;stroke:black;stroke-width:13.6}
+    .fil0 {fill:none;fill-rule:nonzero;stroke:black;stroke-width:13.6}
+    .fil4 {fill:black;stroke:black;stroke-width:13.6}
+    .fil5 {fill:#3A383D;stroke:black;stroke-width:13.6}
+    .fil6 {fill:#4A474E;stroke:black;stroke-width:13.6}
+    .fil7 {fill:#5B575E;stroke:black;stroke-width:13.6}
+    .fil8 {fill:#6B676F;stroke:black;stroke-width:13.6}
+    .fil9 {fill:#7B7680;stroke:black;stroke-width:13.6}
+    .fil10 {fill:#8B8691;stroke:black;stroke-width:13.6}
+    .fil11 {fill:#9B95A2;stroke:black;stroke-width:13.6}
+    .fil12 {fill:#ABA5B3;stroke:black;stroke-width:13.6}
+    .fil13 {fill:#BCB5C3;stroke:black;stroke-width:13.6}
+    .fil14 {fill:#CCC4D4;stroke:black;stroke-width:13.6}
+    .fil3 {fill:#DCD4E5;stroke:black;stroke-width:13.6}
+    .fil1 {fill:#E31C11;stroke:black;stroke-width:13.6}
+   ]]>
+    </style>
+  </defs>
+  <g id="Layer_x0020_1">
+    <path class="fil0" d="M15277 4779c-1979-108-3078-1153-4089-2267C10004 1210 8958 333 7123 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M15277 4779c-1979-108-3078-1153-4089-2267C10004 1210 8958 333 7123 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M7123 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M7123 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M10877 4779c-1979-108-3078-1153-4089-2267C5604 1210 4558 333 2723 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M10877 4779c-1979-108-3078-1153-4089-2267C5604 1210 4558 333 2723 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M2723 4779c1979-108 3078-1153 4089-2267C7996 1210 9042 333 10877 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M2723 4779c1979-108 3078-1153 4089-2267C7996 1210 9042 333 10877 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M15177 4779c-1979-108-3078-1153-4089-2267C9904 1210 8858 333 7023 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M15177 4779c-1979-108-3078-1153-4089-2267C9904 1210 8858 333 7023 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M7023 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M7023 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M10977 4779c-1979-108-3078-1153-4089-2267C5704 1210 4658 333 2823 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M10977 4779c-1979-108-3078-1153-4089-2267C5704 1210 4658 333 2823 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M2823 4779c1979-108 3078-1153 4089-2267C8096 1210 9142 333 10977 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M2823 4779c1979-108 3078-1153 4089-2267C8096 1210 9142 333 10977 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M15077 4779c-1979-108-3078-1153-4089-2267C9804 1210 8758 333 6923 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M15077 4779c-1979-108-3078-1153-4089-2267C9804 1210 8758 333 6923 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M6923 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M6923 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M11077 4779c-1979-108-3078-1153-4089-2267C5804 1210 4758 333 2923 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M11077 4779c-1979-108-3078-1153-4089-2267C5804 1210 4758 333 2923 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M2923 4779c1979-108 3078-1153 4089-2267C8196 1210 9242 333 11077 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M2923 4779c1979-108 3078-1153 4089-2267C8196 1210 9242 333 11077 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M14977 4779c-1979-108-3078-1153-4089-2267C9704 1210 8658 333 6823 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M14977 4779c-1979-108-3078-1153-4089-2267C9704 1210 8658 333 6823 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M6823 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M6823 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M11177 4779c-1979-108-3078-1153-4089-2267C5904 1210 4858 333 3023 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M11177 4779c-1979-108-3078-1153-4089-2267C5904 1210 4858 333 3023 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M3023 4779c1979-108 3078-1153 4089-2267C8296 1210 9342 333 11177 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M3023 4779c1979-108 3078-1153 4089-2267C8296 1210 9342 333 11177 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M14877 4779c-1979-108-3078-1153-4089-2267C9604 1210 8558 333 6723 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil3" d="M14877 4779c-1979-108-3078-1153-4089-2267C9604 1210 8558 333 6723 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M6723 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil3" d="M6723 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M11277 4779c-1979-108-3078-1153-4089-2267C6004 1210 4958 333 3123 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M11277 4779c-1979-108-3078-1153-4089-2267C6004 1210 4958 333 3123 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M3123 4779c1979-108 3078-1153 4089-2267C8396 1210 9442 333 11277 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M3123 4779c1979-108 3078-1153 4089-2267C8396 1210 9442 333 11277 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M14777 4779c-1979-108-3078-1153-4089-2267C9504 1210 8458 333 6623 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil3" d="M14777 4779c-1979-108-3078-1153-4089-2267C9504 1210 8458 333 6623 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M6623 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil3" d="M6623 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M11377 4779c-1979-108-3078-1153-4089-2267C6104 1210 5058 333 3223 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M11377 4779c-1979-108-3078-1153-4089-2267C6104 1210 5058 333 3223 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M3223 4779c1979-108 3078-1153 4089-2267C8496 1210 9542 333 11377 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M3223 4779c1979-108 3078-1153 4089-2267C8496 1210 9542 333 11377 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M14677 4779c-1979-108-3078-1153-4089-2267C9404 1210 8358 333 6523 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil3" d="M14677 4779c-1979-108-3078-1153-4089-2267C9404 1210 8358 333 6523 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M6523 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil3" d="M6523 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M11477 4779c-1979-108-3078-1153-4089-2267C6204 1210 5158 333 3323 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M11477 4779c-1979-108-3078-1153-4089-2267C6204 1210 5158 333 3323 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M3323 4779c1979-108 3078-1153 4089-2267C8596 1210 9642 333 11477 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M3323 4779c1979-108 3078-1153 4089-2267C8596 1210 9642 333 11477 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M14577 4779c-1979-108-3078-1153-4089-2267C9304 1210 8258 333 6423 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil3" d="M14577 4779c-1979-108-3078-1153-4089-2267C9304 1210 8258 333 6423 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M6423 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil3" d="M6423 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M11577 4779c-1979-108-3078-1153-4089-2267C6304 1210 5258 333 3423 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M11577 4779c-1979-108-3078-1153-4089-2267C6304 1210 5258 333 3423 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M3423 4779c1979-108 3078-1153 4089-2267C8696 1210 9742 333 11577 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M3423 4779c1979-108 3078-1153 4089-2267C8696 1210 9742 333 11577 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M11677 4779c-1979-108-3078-1153-4089-2267C6404 1210 5358 333 3523 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil3" d="M11677 4779c-1979-108-3078-1153-4089-2267C6404 1210 5358 333 3523 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M3523 4779c1979-108 3078-1153 4089-2267C8796 1210 9842 333 11677 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil3" d="M3523 4779c1979-108 3078-1153 4089-2267C8796 1210 9842 333 11677 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M14477 4779c-1979-108-3078-1153-4089-2267C9204 1210 8158 333 6323 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil3" d="M14477 4779c-1979-108-3078-1153-4089-2267C9204 1210 8158 333 6323 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M6323 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil3" d="M6323 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M11777 4779c-1979-108-3078-1153-4089-2267C6504 1210 5458 333 3623 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil3" d="M11777 4779c-1979-108-3078-1153-4089-2267C6504 1210 5458 333 3623 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M3623 4779c1979-108 3078-1153 4089-2267C8896 1210 9942 333 11777 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil3" d="M3623 4779c1979-108 3078-1153 4089-2267C8896 1210 9942 333 11777 227v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M14377 4779c-1979-108-3078-1153-4089-2267C9104 1210 8058 333 6223 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil3" d="M14377 4779c-1979-108-3078-1153-4089-2267C9104 1210 8058 333 6223 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M6223 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil3" d="M6223 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M11877 4779c-1979-108-3078-1153-4089-2267C6604 1210 5558 333 3723 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil3" d="M11877 4779c-1979-108-3078-1153-4089-2267C6604 1210 5558 333 3723 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M3723 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil3" d="M3723 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M6123 4779c1979-108 3078-1153 4089-2267 1183-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil4" d="M6123 4779c1979-108 3078-1153 4089-2267 1183-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M14277 4779c-1979-108-3078-1153-4089-2267C9004 1210 7958 333 6123 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil4" d="M14277 4779c-1979-108-3078-1153-4089-2267C9004 1210 7958 333 6123 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M3823 4779c1979-108 3078-1153 4089-2267 1183-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil4" d="M3823 4779c1979-108 3078-1153 4089-2267 1183-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M11977 4779c-1979-108-3078-1153-4089-2267C6704 1210 5658 333 3823 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil4" d="M11977 4779c-1979-108-3078-1153-4089-2267C6704 1210 5658 333 3823 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M14177 4779c-1979-108-3078-1153-4089-2267C8904 1210 7858 333 6023 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M14177 4779c-1979-108-3078-1153-4089-2267C8904 1210 7858 333 6023 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M6023 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M6023 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M12077 4779c-1979-108-3078-1153-4089-2267C6804 1210 5758 333 3923 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M12077 4779c-1979-108-3078-1153-4089-2267C6804 1210 5758 333 3923 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M3923 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M3923 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M14077 4779c-1979-108-3078-1153-4089-2267C8804 1210 7758 333 5923 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M14077 4779c-1979-108-3078-1153-4089-2267C8804 1210 7758 333 5923 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M5923 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M5923 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M12177 4779c-1979-108-3078-1153-4089-2267C6904 1210 5858 333 4023 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M12177 4779c-1979-108-3078-1153-4089-2267C6904 1210 5858 333 4023 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M4023 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M4023 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M13977 4779c-1979-108-3078-1153-4089-2267C8704 1210 7658 333 5823 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M13977 4779c-1979-108-3078-1153-4089-2267C8704 1210 7658 333 5823 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M5823 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M5823 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M13877 4779c-1979-108-3078-1153-4089-2267C8604 1210 7558 333 5723 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M13877 4779c-1979-108-3078-1153-4089-2267C8604 1210 7558 333 5723 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M5723 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M5723 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M13777 4779c-1979-108-3078-1153-4089-2267C8504 1210 7458 333 5623 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M13777 4779c-1979-108-3078-1153-4089-2267C8504 1210 7458 333 5623 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M5623 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M5623 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M13677 4779c-1979-108-3078-1153-4089-2267C8404 1210 7358 333 5523 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M13677 4779c-1979-108-3078-1153-4089-2267C8404 1210 7358 333 5523 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M5523 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M5523 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M13577 4779c-1979-108-3078-1153-4089-2267C8304 1210 7258 333 5423 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M13577 4779c-1979-108-3078-1153-4089-2267C8304 1210 7258 333 5423 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M5423 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M5423 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M12277 4779c-1979-108-3078-1153-4089-2267C7004 1210 5958 333 4123 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil1" d="M12277 4779c-1979-108-3078-1153-4089-2267C7004 1210 5958 333 4123 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M4123 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil1" d="M4123 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M5323 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil4" d="M5323 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M13477 4779c-1979-108-3078-1153-4089-2267C8204 1210 7158 333 5323 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil4" d="M13477 4779c-1979-108-3078-1153-4089-2267C8204 1210 7158 333 5323 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M13377 4779c-1979-108-3078-1153-4089-2267C8104 1210 7058 333 5223 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil5" d="M13377 4779c-1979-108-3078-1153-4089-2267C8104 1210 7058 333 5223 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M5223 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil5" d="M5223 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M13277 4779c-1979-108-3078-1153-4089-2267C8004 1210 6958 333 5123 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil6" d="M13277 4779c-1979-108-3078-1153-4089-2267C8004 1210 6958 333 5123 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M5123 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil6" d="M5123 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M13177 4779c-1979-108-3078-1153-4089-2267C7904 1210 6858 333 5023 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil7" d="M13177 4779c-1979-108-3078-1153-4089-2267C7904 1210 6858 333 5023 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M5023 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil7" d="M5023 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M13077 4779c-1979-108-3078-1153-4089-2267C7804 1210 6758 333 4923 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil8" d="M13077 4779c-1979-108-3078-1153-4089-2267C7804 1210 6758 333 4923 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M4923 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil8" d="M4923 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M12977 4779c-1979-108-3078-1153-4089-2267C7704 1210 6658 333 4823 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil9" d="M12977 4779c-1979-108-3078-1153-4089-2267C7704 1210 6658 333 4823 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M4823 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil9" d="M4823 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M12877 4779c-1979-108-3078-1153-4089-2267C7604 1210 6558 333 4723 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil10" d="M12877 4779c-1979-108-3078-1153-4089-2267C7604 1210 6558 333 4723 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M4723 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil10" d="M4723 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M12777 4779c-1979-108-3078-1153-4089-2267C7504 1210 6458 333 4623 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil11" d="M12777 4779c-1979-108-3078-1153-4089-2267C7504 1210 6458 333 4623 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M4623 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil11" d="M4623 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M12677 4779c-1979-108-3078-1153-4089-2267C7404 1210 6358 333 4523 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil12" d="M12677 4779c-1979-108-3078-1153-4089-2267C7404 1210 6358 333 4523 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M4523 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil12" d="M4523 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M12577 4779c-1979-108-3078-1153-4089-2267C7304 1210 6258 333 4423 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil13" d="M12577 4779c-1979-108-3078-1153-4089-2267C7304 1210 6258 333 4423 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M4423 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil13" d="M4423 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M12477 4779c-1979-108-3078-1153-4089-2267C7204 1210 6158 333 4323 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil14" d="M12477 4779c-1979-108-3078-1153-4089-2267C7204 1210 6158 333 4323 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil2" d="M4323 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil14" d="M4323 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M4223 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil4" d="M4223 4779c1979-108 3078-1153 4089-2267 1184-1302 2230-2179 4065-2285v-6c-2020 68-3117 1150-4115 2241-1184 1300-2214 2163-4039 2308v9z"/>
+    <path class="fil2" d="M12377 4779c-1979-108-3078-1153-4089-2267C7104 1210 6058 333 4223 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+    <path class="fil4" d="M12377 4779c-1979-108-3078-1153-4089-2267C7104 1210 6058 333 4223 227v-6c2020 68 3117 1150 4115 2241 1184 1300 2214 2163 4039 2308v9z"/>
+  </g>
+</svg>
+
+</div>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>
+var _currentFill = "fill:#000";
+$("#pattern").click(function (event) {
+        $(event.target).attr('style', _currentFill);
+    });
+var $swatches = $("#swatches");
+    $swatches.click(function (event) {
+        $swatch = $(event.target);
+        loc = [parseInt($swatch.attr('x'), 10), parseInt($swatch.attr('y'), 10)]
+        $("#selection", $swatches).attr('x', loc[0]);
+        $("#selection", $swatches).attr('y', loc[1]);
+        _currentFill = $swatch.attr('style');
+    })
+</script>
+    
+ <script>
+        window.onload       = function() {      
+        window.cross      = svgPanZoom('#pattern', {
+        zoomEnabled: true,
+        zoomScaleSensitivity: 0.5,
+		minZoom: 1,
+		maxZoom: 20,
+		panEnabled: true,
+		dblClickZoomEnabled: false,
+        fit: true,
+        center: true,	
+                 });
+      };
+</script>   
+</body>
+</html>
+
+
+   
