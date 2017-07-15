@@ -72,6 +72,9 @@ viewBox="0 0 774 153"
 <a target = "_blank" href = "https://www.youtube.com/watch?v=QoLMJTU2dao">
 <img src="img/instructions.jpg" style="width:230px;height:230px;"></a></div>
 
+<div class="morph pic" style = "width:230px; height:230px;">
+<a href="pattern/Guide.html">
+<img src="img/Guide.jpg" style="width:230px;height:230px;"></a></div>
 	
 <div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/Moorish Idol.html">
