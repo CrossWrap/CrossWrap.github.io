@@ -76,6 +76,13 @@ viewBox="0 0 774 153"
 <a href="pattern/Guide.html">
 <img src="img/Guide.jpg" style="width:230px;height:230px;"></a></div>
 
+
+<div class="morph pic" style = "width:230px; height:230px;">
+<a href="pattern/Small Fish.html">
+<img src="img/Small Fish.jpg" style="width:230px;height:230px;"></a></div>
+
+
+
 <div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/Fish.html">
 <img src="img/Fish.jpg" style="width:230px;height:230px;"></a></div>
