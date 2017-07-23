@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<script src="../js/svg-pan-zoom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+</head>
+            
+<body>
+<style>
+#sidebar {float: none;width: 60pxhover: blue;}
+</style>
+<div id="sidebar">
+    
+    
+<svg id="swatches" width="900" height="260" style="stroke: #000;stroke-width: 2; stroke-opacity: 0">
+
+  <rect style="fill:#000000" width="23" height="23" />
+  <rect style="fill:#F47F17" y="25" width="23" height="23" />
+  <rect style="fill:#FF6E00" y="50" width="23" height="23" />
+  <rect style="fill:#E65100" y="75" width="23" height="23" />
+  <rect style="fill:#BF360C" y="100" width="23" height="23" />
+  <rect style="fill:#B71C1C" y="125" width="23" height="23" />
+  <rect style="fill:#880E4F" y="150" width="23" height="23" />
+  <rect style="fill:#4A148C" y="175" width="23" height="23" />
+  <rect style="fill:#311B92" y="200" width="23" height="23" />
+  <rect style="fill:#424242" x="25" width="23" height="23" />
+  <rect style="fill:#F9A825" x="25" y="25" width="23" height="23" />
+  <rect style="fill:#FF8F00" x="25" y="50" width="23" height="23" />
+  <rect style="fill:#EF6C00" x="25" y="75" width="23" height="23" />
+  <rect style="fill:#D84315" x="25" y="100" width="23" height="23" />
+  <rect style="fill:#C62828" x="25" y="125" width="23" height="23" />
+  <rect style="fill:#AD1457" x="25" y="150" width="23" height="23" />
+  <rect style="fill:#6A1B9A" x="25" y="175" width="23" height="23" />
+  <rect style="fill:#4527A0" x="25" y="200" width="23" height="23" />
+  <rect style="fill:#616161" x="50" width="23" height="23" />
+  <rect style="fill:#FBC02D" x="50" y="25" width="23" height="23" />
+  <rect style="fill:#FFA000" x="50" y="50" width="23" height="23" />
+  <rect style="fill:#F57C00" x="50" y="75" width="23" height="23" />
+  <rect style="fill:#E64A18" x="50" y="100" width="23" height="23" />
+  <rect style="fill:#D32F2F" x="50" y="125" width="23" height="23" />
+  <rect style="fill:#C2185B" x="50" y="150" width="23" height="23" />
+  <rect style="fill:#7B1EA2" x="50" y="175" width="23" height="23" />
+  <rect style="fill:#512CA8" x="50" y="200" width="23" height="23" />
+  <rect style="fill:#757575" x="75" width="23" height="23" />
+  <rect style="fill:#FDD735" x="75" y="25" width="23" height="23" />
+  <rect style="fill:#FFB300" x="75" y="50" width="23" height="23" />
+  <rect style="fill:#FB8C00" x="75" y="75" width="23" height="23" />
+  <rect style="fill:#F4511E" x="75" y="100" width="23" height="23" />
+  <rect style="fill:#E53935" x="75" y="125" width="23" height="23" />
+  <rect style="fill:#D81B60" x="75" y="150" width="23" height="23" />
+  <rect style="fill:#8E24AA" x="75" y="175" width="23" height="23" />
+  <rect style="fill:#5E35B1" x="75" y="200" width="23" height="23" />
+  <rect style="fill:#9E9E9E" x="100" width="23" height="23" />
+  <rect style="fill:#FEEB3B" x="100" y="25" width="23" height="23" />
+  <rect style="fill:#FFC107" x="100" y="50" width="23" height="23" />
+  <rect style="fill:#FF9800" x="100" y="75" width="23" height="23" />
+  <rect style="fill:#FF5722" x="100" y="100" width="23" height="23" />
+  <rect style="fill:#F44336" x="100" y="125" width="23" height="23" />
+  <rect style="fill:#E91D62" x="100" y="150" width="23" height="23" />
+  <rect style="fill:#9C27B0" x="100" y="175" width="23" height="23" />
+  <rect style="fill:#673AB7" x="100" y="200" width="23" height="23" />
+  <rect style="fill:#BDBDBD" x="125" width="23" height="23" />
+  <rect style="fill:#FFEE58" x="125" y="25" width="23" height="23" />
+  <rect style="fill:#FFCA28" x="125" y="50" width="23" height="23" />
+  <rect style="fill:#FFA726" x="125" y="75" width="23" height="23" />
+  <rect style="fill:#FF6F43" x="125" y="100" width="23" height="23" />
+  <rect style="fill:#EF5350" x="125" y="125" width="23" height="23" />
+  <rect style="fill:#EC407A" x="125" y="150" width="23" height="23" />
+  <rect style="fill:#AB47BC" x="125" y="175" width="23" height="23" />
+  <rect style="fill:#7D57C2" x="125" y="200" width="23" height="23" />
+  <rect style="fill:#E0E0E0" x="150" width="23" height="23" />
+  <rect style="fill:#FFEA00" x="150" y="25" width="23" height="23" />
+  <rect style="fill:#FFC300" x="150" y="50" width="23" height="23" />
+  <rect style="fill:#FF9100" x="150" y="75" width="23" height="23" />
+  <rect style="fill:#FF3D00" x="150" y="100" width="23" height="23" />
+  <rect style="fill:#FE1744" x="150" y="125" width="23" height="23" />
+  <rect style="fill:#F50057" x="150" y="150" width="23" height="23" />
+  <rect style="fill:#D500F9" x="150" y="175" width="23" height="23" />
+  <rect style="fill:#651FFF" x="150" y="200" width="23" height="23" />
+  <rect style="fill:#EEEEEE" x="175" width="23" height="23" />
+  <rect style="fill:#FFFF00" x="175" y="25" width="23" height="23" />
+  <rect style="fill:#FFD740" x="175" y="50" width="23" height="23" />
+  <rect style="fill:#FFAB40" x="175" y="75" width="23" height="23" />
+  <rect style="fill:#FF6E40" x="175" y="100" width="23" height="23" />
+  <rect style="fill:#FF5252" x="175" y="125" width="23" height="23" />
+  <rect style="fill:#FE4081" x="175" y="150" width="23" height="23" />
+  <rect style="fill:#E040FB" x="175" y="175" width="23" height="23" />
+  <rect style="fill:#7C4DFF" x="175" y="200" width="23" height="23" />
+  <rect style="fill:#F4F4F4" x="200" width="23" height="23" />
+  <rect style="fill:#FFFF8D" x="200" y="25" width="23" height="23" />
+  <rect style="fill:#FFE57F" x="200" y="50" width="23" height="23" />
+  <rect style="fill:#FFD080" x="200" y="75" width="23" height="23" />
+  <rect style="fill:#FF9E80" x="200" y="100" width="23" height="23" />
+  <rect style="fill:#FF8A80" x="200" y="125" width="23" height="23" />
+  <rect style="fill:#FF80AB" x="200" y="150" width="23" height="23" />
+  <rect style="fill:#EA80FB" x="200" y="175" width="23" height="23" />
+  <rect style="fill:#B388FE" x="200" y="200" width="23" height="23" />
+  <rect style="fill:#FAFAFA" x="225" width="23" height="23" />
+  <rect style="fill:#FFF076" x="225" y="25" width="23" height="23" />
+  <rect style="fill:#FED54F" x="225" y="50" width="23" height="23" />
+  <rect style="fill:#FFB74D" x="225" y="75" width="23" height="23" />
+  <rect style="fill:#FF8A64" x="225" y="100" width="23" height="23" />
+  <rect style="fill:#E57373" x="225" y="125" width="23" height="23" />
+  <rect style="fill:#F06192" x="225" y="150" width="23" height="23" />
+  <rect style="fill:#BA68C8" x="225" y="175" width="23" height="23" />
+  <rect style="fill:#9575CD" x="225" y="200" width="23" height="23" />
+  <rect style="fill:#455A64" x="250" width="23" height="23" />
+  <rect style="fill:#FFF59D" x="250" y="25" width="23" height="23" />
+  <rect style="fill:#FFE082" x="250" y="50" width="23" height="23" />
+  <rect style="fill:#FFCC80" x="250" y="75" width="23" height="23" />
+  <rect style="fill:#FFAB91" x="250" y="100" width="23" height="23" />
+  <rect style="fill:#EF9A9A" x="250" y="125" width="23" height="23" />
+  <rect style="fill:#F48FB1" x="250" y="150" width="23" height="23" />
+  <rect style="fill:#CE93D8" x="250" y="175" width="23" height="23" />
+  <rect style="fill:#B39DDB" x="250" y="200" width="23" height="23" />
+  <rect style="fill:#546E7A" x="275" width="23" height="23" />
+  <rect style="fill:#FFF9C4" x="275" y="25" width="23" height="23" />
+  <rect style="fill:#FFECB3" x="275" y="50" width="23" height="23" />
+  <rect style="fill:#FFE0B2" x="275" y="75" width="23" height="23" />
+  <rect style="fill:#FECCBC" x="275" y="100" width="23" height="23" />
+  <rect style="fill:#FECDD2" x="275" y="125" width="23" height="23" />
+  <rect style="fill:#F8BAD0" x="275" y="150" width="23" height="23" />
+  <rect style="fill:#E1BEE7" x="275" y="175" width="23" height="23" />
+  <rect style="fill:#D1C4E9" x="275" y="200" width="23" height="23" />
+  <rect style="fill:#607D8B" x="300" width="23" height="23" />
+  <rect style="fill:#FFFDE7" x="300" y="25" width="23" height="23" />
+  <rect style="fill:#FEF8E1" x="300" y="50" width="23" height="23" />
+  <rect style="fill:#FFF3E0" x="300" y="75" width="23" height="23" />
+  <rect style="fill:#FBE9E7" x="300" y="100" width="23" height="23" />
+  <rect style="fill:#FFEBEE" x="300" y="125" width="23" height="23" />
+  <rect style="fill:#FCE3EC" x="300" y="150" width="23" height="23" />
+  <rect style="fill:#F3E5F5" x="300" y="175" width="23" height="23" />
+  <rect style="fill:#EDE6F6" x="300" y="200" width="23" height="23" />
+  <rect style="fill:#78909C" x="325" width="23" height="23" />
+  <rect style="fill:#827717" x="325" y="25" width="23" height="23" />
+  <rect style="fill:#33691D" x="325" y="50" width="23" height="23" />
+  <rect style="fill:#1B5E20" x="325" y="75" width="23" height="23" />
+  <rect style="fill:#004D40" x="325" y="100" width="23" height="23" />
+  <rect style="fill:#006064" x="325" y="125" width="23" height="23" />
+  <rect style="fill:#01579B" x="325" y="150" width="23" height="23" />
+  <rect style="fill:#0D47A1" x="325" y="175" width="23" height="23" />
+  <rect style="fill:#1A237E" x="325" y="200" width="23" height="23" />
+  <rect style="fill:#90A4AE" x="350" width="23" height="23" />
+  <rect style="fill:#9E9D24" x="350" y="25" width="23" height="23" />
+  <rect style="fill:#558B2F" x="350" y="50" width="23" height="23" />
+  <rect style="fill:#2E7C32" x="350" y="75" width="23" height="23" />
+  <rect style="fill:#00695C" x="350" y="100" width="23" height="23" />
+  <rect style="fill:#00838F" x="350" y="125" width="23" height="23" />
+  <rect style="fill:#0277BD" x="350" y="150" width="23" height="23" />
+  <rect style="fill:#1565C0" x="350" y="175" width="23" height="23" />
+  <rect style="fill:#283593" x="350" y="200" width="23" height="23" />
+  <rect style="fill:#B0BEC5" x="375" width="23" height="23" />
+  <rect style="fill:#AFB42B" x="375" y="25" width="23" height="23" />
+  <rect style="fill:#689F37" x="375" y="50" width="23" height="23" />
+  <rect style="fill:#378E3C" x="375" y="75" width="23" height="23" />
+  <rect style="fill:#00796B" x="375" y="100" width="23" height="23" />
+  <rect style="fill:#0097A7" x="375" y="125" width="23" height="23" />
+  <rect style="fill:#0288D1" x="375" y="150" width="23" height="23" />
+  <rect style="fill:#1976D2" x="375" y="175" width="23" height="23" />
+  <rect style="fill:#303F9F" x="375" y="200" width="23" height="23" />
+  <rect style="fill:#CFD8DC" x="400" width="23" height="23" />
+  <rect style="fill:#C0CA33" x="400" y="25" width="23" height="23" />
+  <rect style="fill:#7CB342" x="400" y="50" width="23" height="23" />
+  <rect style="fill:#43A047" x="400" y="75" width="23" height="23" />
+  <rect style="fill:#00897B" x="400" y="100" width="23" height="23" />
+  <rect style="fill:#00ACC1" x="400" y="125" width="23" height="23" />
+  <rect style="fill:#029BE5" x="400" y="150" width="23" height="23" />
+  <rect style="fill:#1E88E5" x="400" y="175" width="23" height="23" />
+  <rect style="fill:#3949AB" x="400" y="200" width="23" height="23" />
+  <rect style="fill:#EBEFF1" x="425" width="23" height="23" />
+  <rect style="fill:#CCDC39" x="425" y="25" width="23" height="23" />
+  <rect style="fill:#8BC24A" x="425" y="50" width="23" height="23" />
+  <rect style="fill:#4CAF50" x="425" y="75" width="23" height="23" />
+  <rect style="fill:#009688" x="425" y="100" width="23" height="23" />
+  <rect style="fill:#00BCD4" x="425" y="125" width="23" height="23" />
+  <rect style="fill:#03A9F4" x="425" y="150" width="23" height="23" />
+  <rect style="fill:#2196F3" x="425" y="175" width="23" height="23" />
+  <rect style="fill:#3E51B5" x="425" y="200" width="23" height="23" />
+  <rect style="fill:#4E332E" x="450" width="23" height="23" />
+  <rect style="fill:#CCDC39" x="450" y="25" width="23" height="23" />
+  <rect style="fill:#8BC24A" x="450" y="50" width="23" height="23" />
+  <rect style="fill:#4CAF50" x="450" y="75" width="23" height="23" />
+  <rect style="fill:#009688" x="450" y="100" width="23" height="23" />
+  <rect style="fill:#00BCD4" x="450" y="125" width="23" height="23" />
+  <rect style="fill:#03A9F4" x="450" y="150" width="23" height="23" />
+  <rect style="fill:#2196F3" x="450" y="175" width="23" height="23" />
+  <rect style="fill:#3E51B5" x="450" y="200" width="23" height="23" />
+  <rect style="fill:#5D4037" x="475" width="23" height="23" />
+  <rect style="fill:#AEEA00" x="475" y="25" width="23" height="23" />
+  <rect style="fill:#64DD17" x="475" y="50" width="23" height="23" />
+  <rect style="fill:#00C853" x="475" y="75" width="23" height="23" />
+  <rect style="fill:#00BFA5" x="475" y="100" width="23" height="23" />
+  <rect style="fill:#00B8D4" x="475" y="125" width="23" height="23" />
+  <rect style="fill:#0091EA" x="475" y="150" width="23" height="23" />
+  <rect style="fill:#2962FF" x="475" y="175" width="23" height="23" />
+  <rect style="fill:#304FFE" x="475" y="200" width="23" height="23" />
+  <rect style="fill:#6D4C41" x="500" width="23" height="23" />
+  <rect style="fill:#C6FE00" x="500" y="25" width="23" height="23" />
+  <rect style="fill:#76FF03" x="500" y="50" width="23" height="23" />
+  <rect style="fill:#00E676" x="500" y="75" width="23" height="23" />
+  <rect style="fill:#1DE9B6" x="500" y="100" width="23" height="23" />
+  <rect style="fill:#00E5FF" x="500" y="125" width="23" height="23" />
+  <rect style="fill:#00B0FF" x="500" y="150" width="23" height="23" />
+  <rect style="fill:#2979FF" x="500" y="175" width="23" height="23" />
+  <rect style="fill:#3D5AFE" x="500" y="200" width="23" height="23" />
+  <rect style="fill:#795548" x="525" width="23" height="23" />
+  <rect style="fill:#EEFF41" x="525" y="25" width="23" height="23" />
+  <rect style="fill:#B2FF59" x="525" y="50" width="23" height="23" />
+  <rect style="fill:#69F0AE" x="525" y="75" width="23" height="23" />
+  <rect style="fill:#64FFDA" x="525" y="100" width="23" height="23" />
+  <rect style="fill:#18FFFF" x="525" y="125" width="23" height="23" />
+  <rect style="fill:#40C4FF" x="525" y="150" width="23" height="23" />
+  <rect style="fill:#448AFF" x="525" y="175" width="23" height="23" />
+  <rect style="fill:#536DFD" x="525" y="200" width="23" height="23" />
+  <rect style="fill:#8D6E62" x="550" width="23" height="23" />
+  <rect style="fill:#D4E157" x="550" y="25" width="23" height="23" />
+  <rect style="fill:#9CCC65" x="550" y="50" width="23" height="23" />
+  <rect style="fill:#66BB6A" x="550" y="75" width="23" height="23" />
+  <rect style="fill:#26A69A" x="550" y="100" width="23" height="23" />
+  <rect style="fill:#26C6DA" x="550" y="125" width="23" height="23" />
+  <rect style="fill:#29B6F6" x="550" y="150" width="23" height="23" />
+  <rect style="fill:#42A5F5" x="550" y="175" width="23" height="23" />
+  <rect style="fill:#5C6BC0" x="550" y="200" width="23" height="23" />
+  <rect style="fill:#A1887E" x="575" width="23" height="23" />
+  <rect style="fill:#DBE675" x="575" y="25" width="23" height="23" />
+  <rect style="fill:#AED581" x="575" y="50" width="23" height="23" />
+  <rect style="fill:#81C784" x="575" y="75" width="23" height="23" />
+  <rect style="fill:#4DB5AC" x="575" y="100" width="23" height="23" />
+  <rect style="fill:#4DD0E1" x="575" y="125" width="23" height="23" />
+  <rect style="fill:#4FC3F7" x="575" y="150" width="23" height="23" />
+  <rect style="fill:#63B4F6" x="575" y="175" width="23" height="23" />
+  <rect style="fill:#7986CB" x="575" y="200" width="23" height="23" />
+  <rect style="fill:#BCAAA4" x="600" width="23" height="23" />
+  <rect style="fill:#E6EE9C" x="600" y="25" width="23" height="23" />
+  <rect style="fill:#C5E1A5" x="600" y="50" width="23" height="23" />
+  <rect style="fill:#A5D6A7" x="600" y="75" width="23" height="23" />
+  <rect style="fill:#80CAC4" x="600" y="100" width="23" height="23" />
+  <rect style="fill:#80DEE9" x="600" y="125" width="23" height="23" />
+  <rect style="fill:#81D4FA" x="600" y="150" width="23" height="23" />
+  <rect style="fill:#90C9F9" x="600" y="175" width="23" height="23" />
+  <rect style="fill:#9FA8DA" x="600" y="200" width="23" height="23" />
+  <rect style="fill:#D7CCC8" x="625" width="23" height="23" />
+  <rect style="fill:#F4FE81" x="625" y="25" width="23" height="23" />
+  <rect style="fill:#CCFF90" x="625" y="50" width="23" height="23" />
+  <rect style="fill:#B8F6CA" x="625" y="75" width="23" height="23" />
+  <rect style="fill:#A7FFEA" x="625" y="100" width="23" height="23" />
+  <rect style="fill:#84FFFF" x="625" y="125" width="23" height="23" />
+  <rect style="fill:#80D7FF" x="625" y="150" width="23" height="23" />
+  <rect style="fill:#82B1FF" x="625" y="175" width="23" height="23" />
+  <rect style="fill:#8C9EFF" x="625" y="200" width="23" height="23" />
+  <rect style="fill:#EFEBE9" x="650" width="23" height="23" />
+  <rect style="fill:#EFF4C3" x="650" y="25" width="23" height="23" />
+  <rect style="fill:#DCEDC8" x="650" y="50" width="23" height="23" />
+  <rect style="fill:#C7E6C9" x="650" y="75" width="23" height="23" />
+  <rect style="fill:#B2DFDB" x="650" y="100" width="23" height="23" />
+  <rect style="fill:#B2EAF2" x="650" y="125" width="23" height="23" />
+  <rect style="fill:#B3E5FC" x="650" y="150" width="23" height="23" />
+  <rect style="fill:#BBDEFB" x="650" y="175" width="23" height="23" />
+  <rect style="fill:#C5C9E8" x="650" y="200" width="23" height="23" />
+  <rect style="fill:#FAF7F5" x="675" width="23" height="23" />
+  <rect style="fill:#F9FBE7" x="675" y="25" width="23" height="23" />
+  <rect style="fill:#F1F8E9" x="675" y="50" width="23" height="23" />
+  <rect style="fill:#E8F4E9" x="675" y="75" width="23" height="23" />
+  <rect style="fill:#DFF2F1" x="675" y="100" width="23" height="23" />
+  <rect style="fill:#E0F7FA" x="675" y="125" width="23" height="23" />
+  <rect style="fill:#E1F4FE" x="675" y="150" width="23" height="23" />
+  <rect style="fill:#E2F2FD" x="675" y="175" width="23" height="23" />
+  <rect style="fill:#E8EAF6" x="675" y="200" width="23" height="23" />
+  <rect id="selection" style="stroke:#0000ff; stroke-opacity: 1;fill:none" x="0" y="0" width="23" height="23" />
+    
+  <rect fill="#000000" type="button" stroke="#000000" stroke-width="0.68" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#000000';" />
+  <rect fill="#4d3d25" type="button" stroke="#000000" stroke-width="0.68" x="28" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#4d3d25';" />
+  <rect fill="#BBB8BD" type="button" stroke="#000000" stroke-width="0.68" x="56" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#BBB8BD';" />
+  <rect fill="#747A84" type="button" stroke="#000000" stroke-width="0.68" x="84" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#747A84';" />
+  <rect fill="#FFF212" type="button" stroke="#000000" stroke-width="0.68" x="112" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#FFF212';" />
+  <rect fill="#3A41C7" type="button" stroke="#000000" stroke-width="0.68" x="140" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#3A41C7';" />
+  <rect fill="#3F2E5E" type="button" stroke="#000000" stroke-width="0.68" x="168" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#3F2E5E';" />
+  <rect fill="#A90098" type="button" stroke="#000000" stroke-width="0.68" x="195" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#A90098';" />
+  <rect fill="#469ef5" type="button" stroke="#000000" stroke-width="0.68" x="223" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#469ef5';" />
+  <rect fill="#008EEC" type="button" stroke="#000000" stroke-width="0.68" x="251" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#008EEC';" />
+  <rect fill="#9ED5CE" type="button" stroke="#000000" stroke-width="0.68" x="279" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#9ED5CE';" />
+  <rect fill="#FEFEFE" type="button" stroke="#000000" stroke-width="0.68" x="307" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#FEFEFE';" />
+  <rect fill="#2A4C67" type="button" stroke="#000000" stroke-width="0.68" x="335" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#2A4C67';" />
+  <rect fill="#585A43" type="button" stroke="#000000" stroke-width="0.68" x="363" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#585A43';" />
+  <rect fill="#A2D06B" type="button" stroke="#000000" stroke-width="0.68" x="391" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#A2D06B';" />
+  <rect fill="#013C09" type="button" stroke="#000000" stroke-width="0.68" x="419" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#013C09';" />
+  <rect fill="#a0f032" type="button" stroke="#000000" stroke-width="0.68" x="447" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#a0f032';" />
+  <rect fill="#F1E018" type="button" stroke="#000000" stroke-width="0.68" x="475" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#F1E018';" />
+  <rect fill="#E4CF98" type="button" stroke="#000000" stroke-width="0.68" x="503" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#E4CF98';" />
+  <rect fill="#FD8200" type="button" stroke="#000000" stroke-width="0.68" x="530" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#FD8200';" />
+  <rect fill="#B94C00" type="button" stroke="#000000" stroke-width="0.68" x="558" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#B94C00';" />
+  <rect fill="#9A0116" type="button" stroke="#000000" stroke-width="0.68" x="586" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#9A0116';" />
+  <rect fill="#6F1721" type="button" stroke="#000000" stroke-width="0.68" x="614" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#6F1721';" />
+  <rect fill="#5F2124" type="button" stroke="#000000" stroke-width="0.68" x="642" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#5F2124';" />
+  <rect fill="#040e2e" type="button" stroke="#000000" stroke-width="0.68" x="670" y="227" width="27.9215" height="26.08" onclick="document.body.style.backgroundColor = '#040e2e';" />
+ </svg></div>
+
+<div id="area" style="width: 695px; height: 250px; border:1px solid black; ">
+<svg id="pattern" xmlns="http://www.w3.org/2000/svg" width="184mm" height="66.5mm" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 18000 5000">
+<defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#1A1A1A;stroke:black;stroke-width:13.6}
+    .fil2 {fill:#F91C16;stroke:black;stroke-width:13.6}
+    .fil1 {fill:#FFFFE3;stroke:black;stroke-width:13.6}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M10659 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M2605 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4015,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M7341 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M15395 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4015,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M10758 4751c-1955,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M2704 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M7242 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4015,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M15296 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M4090 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -8,8 -16,17 -24,26 -1159,1269 -2175,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M12145 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M13910 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 8,8 16,17 24,26 1159,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M5855 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M2510 4751c1955,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -8,8 -16,17 -24,26 -1159,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M10564 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M15490 4751c-1955,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 8,8 16,17 24,26 1159,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M7436 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M10857 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M2802 4751c1955,-107 3040,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M7143 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M15198 4751c-1955,-107 -3040,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M4189 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -8,8 -16,17 -24,26 -1159,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M12244 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M13811 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 8,8 16,17 24,26 1159,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M5756 4751c1955,-107 3041,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M10956 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M2901 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M7044 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M15099 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M2411 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -8,8 -16,17 -24,26 -1159,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M10466 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M15589 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 8,8 16,17 24,26 1159,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M7534 4751c1955,-107 3041,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M11055 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3000 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M6945 4751c1955,-107 3041,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M15000 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M4288 4751c1955,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -8,8 -16,17 -24,26 -1159,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M12342 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M13712 4751c-1955,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 8,8 16,17 24,26 1159,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M5658 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M11153 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3099 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M6847 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M14901 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M2312 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -8,8 -16,17 -24,26 -1159,1269 -2175,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M10367 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M15688 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 8,8 16,17 24,26 1159,1269 2175,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M7633 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M11252 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3197 4751c1955,-107 3041,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M6748 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M14803 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M4387 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -7,8 -15,17 -23,26 -1160,1269 -2176,2111 -3966,2253 -1,3 0,6 0,9z"/>
+  <path class="fil1" d="M12441 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 1,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M13614 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 7,8 15,17 23,26 1160,1269 2176,2111 3967,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M5559 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 -1,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M11351 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3296 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M6649 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M14704 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M11450 4751c-1955,-107 -3040,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3395 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M6550 4751c1955,-107 3040,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M14605 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M2213 4751c1955,-107 3041,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -8,8 -15,17 -23,26 -1160,1269 -2176,2111 -3967,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M10268 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M15787 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 8,8 15,17 23,26 1160,1269 2176,2111 3967,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M7732 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M4485 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -8,8 -16,17 -24,26 -1159,1269 -2175,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M12540 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M13515 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 8,8 16,17 24,26 1159,1269 2175,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M5460 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M11548 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3494 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4015,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M6452 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M14506 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4015,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M11647 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4015,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3593 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M6353 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4015,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M14407 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M4584 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -8,8 -16,17 -24,26 -1159,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M12639 4751c-1955,-107 -3040,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M13416 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 8,8 16,17 24,26 1159,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M5361 4751c1955,-107 3040,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M11746 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3691 4751c1955,-107 3040,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M6254 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M14309 4751c-1955,-107 -3040,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M4683 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4015,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -8,8 -16,17 -24,26 -1159,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M12737 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M13317 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4015,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 8,8 16,17 24,26 1159,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M5263 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M2115 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -8,8 -16,17 -24,26 -1160,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M10169 4751c-1955,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M15885 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 8,8 16,17 24,26 1160,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M7831 4751c1955,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M11845 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3790 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M6155 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M14210 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M4782 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -8,8 -16,17 -24,26 -1160,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M12836 4751c-1955,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M13218 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 8,8 16,17 24,26 1160,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M5164 4751c1955,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M11944 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3889 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M6056 4751c1955,-107 3041,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M14111 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M2016 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 -1,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -8,8 -16,17 -24,26 -1159,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M10070 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3989,2279 1,3 0,6 0,9z"/>
+  <path class="fil1" d="M15984 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 1,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 8,8 16,17 24,26 1159,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M7930 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3989,2279 -1,3 0,6 0,9z"/>
+  <path class="fil1" d="M4877 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -8,8 -16,17 -24,26 -1160,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M12931 4751c-1955,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M13025 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 8,8 15,17 23,26 1160,1269 2176,2111 3967,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M4970 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M13123 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 8,8 16,17 24,26 1160,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M5069 4751c1955,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M12042 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M3988 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M5958 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M14012 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M1917 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -8,8 -16,17 -24,26 -1159,1269 -2176,2111 -3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M9972 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M16083 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 8,8 16,17 24,26 1159,1269 2176,2111 3966,2253 0,3 0,6 0,9z"/>
+  <path class="fil1" d="M8028 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M9873 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M1818 4751c1955,-107 3040,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M8127 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M16182 4751c-1955,-107 -3040,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M9774 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4015,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M1720 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M8226 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4015,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1169,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M16280 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M9675 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M1621 4751c1955,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M8325 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil0" d="M16379 4751c-1955,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M1522 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M9577 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M16478 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M8423 4751c1955,-107 3041,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M1423 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M9478 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M16577 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M8522 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M1324 4751c1955,-107 3041,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M9379 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M16676 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M8621 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M1226 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M9280 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M16774 4751c-1954,-107 -3040,-1139 -4038,-2239 -1170,-1286 -2204,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4064,2214 1170,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M8720 4751c1955,-107 3040,-1139 4038,-2239 1170,-1286 2204,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4064,2214 -1170,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M1127 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 -1,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2188,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M9182 4751c-1955,-107 -3041,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M16873 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 1,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2188,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M8819 4751c1954,-107 3040,-1139 4038,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3989,2279 -1,3 0,6 0,9z"/>
+  <path class="fil2" d="M1028 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M9083 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M16972 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M8917 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M929 4751c1955,-107 3040,-1139 4039,-2239 1170,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1995,67 -3079,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M8984 4751c-1955,-107 -3040,-1139 -4039,-2239 -1169,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1996,67 3080,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M17071 4751c-1955,-107 -3040,-1139 -4039,-2239 -1170,-1286 -2203,-2152 -4016,-2257 0,-2 0,-4 0,-6 1995,67 3079,1135 4065,2214 1169,1283 2187,2136 3990,2279 0,3 0,6 0,9z"/>
+  <path class="fil2" d="M9016 4751c1955,-107 3040,-1139 4039,-2239 1169,-1286 2203,-2152 4016,-2257 0,-2 0,-4 0,-6 -1996,67 -3080,1135 -4065,2214 -1169,1283 -2187,2136 -3990,2279 0,3 0,6 0,9z"/>
+ </g>
+</svg>
+</div>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>
+var _currentFill = "fill:white";
+$("#pattern").click(function (event) {
+        $(event.target).attr('style', _currentFill);
+    });
+var $swatches = $("#swatches");
+    $swatches.click(function (event) {
+        $swatch = $(event.target);
+        loc = [parseInt($swatch.attr('x'), 10), parseInt($swatch.attr('y'), 10)]
+        $("#selection", $swatches).attr('x', loc[0]);
+        $("#selection", $swatches).attr('y', loc[1]);
+        _currentFill = $swatch.attr('style');
+    })
+</script>
+    
+ <script>
+        window.onload       = function() {      
+        window.cross      = svgPanZoom('#pattern', {
+        zoomEnabled: true,
+        zoomScaleSensitivity: 0.5,
+		minZoom: 1,
+		maxZoom: 20,
+		panEnabled: true,
+		dblClickZoomEnabled: false,
+        fit: true,
+        center: true,	
+                 });
+      };
+</script>   
+</body>
+</html>
+
+
+   
