@@ -80,6 +80,11 @@ viewBox="0 0 774 153"
 <img src="img/Guide.jpg" style="width:230px;height:230px;"></a></div>
 
 <div class="morph pic" style = "width:230px; height:230px;">
+<a href="pattern/American Diamond.html">
+<img src="img/American Diamond.jpg" style="width:230px;height:230px;"></a></div>
+
+
+<div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/Red Baron.html">
 <img src="img/Red Baron.jpg" style="width:230px;height:230px;"></a></div>
 
