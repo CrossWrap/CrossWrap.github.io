@@ -101,7 +101,7 @@ viewBox="0 0 774 153"
 
 <div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/Hypnotic Star.html">
-<img src="img/Hypnotic Star.jpg" style="width:230px;height:230px;"></a></div>
+<img src="img/Hypnotic star.jpg" style="width:230px;height:230px;"></a></div>
 
 <div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/Abstraction.html">
