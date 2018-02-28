@@ -83,6 +83,34 @@ viewBox="0 0 774 153"
 <a href="pattern/American Diamond.html">
 <img src="img/American Diamond.jpg" style="width:230px;height:230px;"></a></div>
 
+<div class="morph pic" style = "width:230px; height:230px;">
+<a href="pattern/Hesperus.html">
+<img src="img/Hesperus.jpg" style="width:230px;height:230px;"></a></div>
+
+<div class="morph pic" style = "width:230px; height:230px;">
+<a href="pattern/Lucky Clover.html">
+<img src="img/Lucky Clover.jpg" style="width:230px;height:230px;"></a></div>
+
+<div class="morph pic" style = "width:230px; height:230px;">
+<a href="pattern/Spaced Star.html">
+<img src="img/Spaced Star.jpg" style="width:230px;height:230px;"></a></div>
+
+<div class="morph pic" style = "width:230px; height:230px;">
+<a href="pattern/Four Kings Variation.html">
+<img src="img/Four Kings Variation.jpg" style="width:230px;height:230px;"></a></div>
+
+<div class="morph pic" style = "width:230px; height:230px;">
+<a href="pattern/Hypnotic Star.html">
+<img src="img/Hypnotic Star.jpg" style="width:230px;height:230px;"></a></div>
+
+<div class="morph pic" style = "width:230px; height:230px;">
+<a href="pattern/Abstraction.html">
+<img src="img/Abstraction.jpg" style="width:230px;height:230px;"></a></div>
+
+<div class="morph pic" style = "width:230px; height:230px;">
+<a href="pattern/Flower Bud.html">
+<img src="img/Flower Bud.jpg" style="width:230px;height:230px;"></a></div>
+
 
 <div class="morph pic" style = "width:230px; height:230px;">
 <a href="pattern/Red Baron.html">
