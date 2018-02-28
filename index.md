@@ -100,7 +100,7 @@ viewBox="0 0 774 153"
 <img src="img/Four Kings Variation.jpg" style="width:230px;height:230px;"></a></div>
 
 <div class="morph pic" style = "width:230px; height:230px;">
-<a href="pattern/Hypnotic Star.html">
+<a href="pattern/Hypnotic star.html">
 <img src="img/Hypnotic star.jpg" style="width:230px;height:230px;"></a></div>
 
 <div class="morph pic" style = "width:230px; height:230px;">
